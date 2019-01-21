@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { LayoutComponent } from './/layouts/layout.component';
 
-import { HomeComponent } from './pages/home/home.component';
+import { HomeComponent } from './_process/home/home.component';
 import { DashboardEcommerceComponent } from './pages/dashboard-ecommerce/dashboard-ecommerce.component';
 import { DashboardBlogComponent } from './pages/dashboard-blog/dashboard-blog.component';
 import { Dashboard4Component } from './pages/dashboard-4/dashboard-4.component';
