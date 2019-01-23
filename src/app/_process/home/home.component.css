@@ -1,0 +1,656 @@
+.segmant-separator{
+
+  background-color: #3e3e3e;
+  min-height: 20px;
+}
+
+
+.footerLinks h3 {
+  color: #000;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+      margin-top: 0px;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+
+ul.listaFooter {
+  padding: 15px 0;
+}
+
+ol, ul {
+  list-style-position: outside;
+  list-style-type: none;
+}
+
+
+ul {
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+}
+
+ul.listaFooter li {
+  margin: 10px 0;
+}
+
+ul.listaFooter li a {
+  transition: color, 0.3s;
+  color: #666666;
+}
+ul.listaFooter li a {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #363636;
+  font-family: 'robotoregular';
+  letter-spacing: 2px;
+}
+a, a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: #000;
+}
+
+.col-20pc {
+  width: 20% !important;
+}
+
+.footerLinks h3 {
+  color: #000;
+  font-family: 'robotoregular';
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+      margin-top: 0px;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+
+ul.listaFooter {
+  padding: 15px 0;
+}
+
+.footerBottomText {
+  padding: 20px 90px;
+}
+
+.footerBottomText p {
+  font-family: 'robotoregular';
+  font-size: 11px;
+  color: #575757;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.gcss-typography-font-size-default, p {
+  font-size: 1rem;
+  line-height: 1.42857;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.catalogueList {
+  border-top: solid 4px #e9e9e9;
+  padding: 24px 0 46px 3px;
+  overflow: hidden;
+}
+
+
+.catalogueList ul {
+  margin: 0 1%;
+  list-style: none;
+  padding: 0;
+  width: 12%;
+  float: left;
+}
+
+.catalogueList ul li.icon {
+  margin: 0;
+  padding: 5px 0;
+}
+
+.catalogueList ul li {
+  margin-top: 5px;
+  border-bottom: solid 1px #ececec;
+  font-weight: 100;
+}
+
+.catalogueList ul li.icon {
+  margin: 0;
+  padding: 5px 0;
+}
+
+.logoTile.AlfaRomeo {
+  background-position: 0 -308px !important;
+}
+
+.logoTile {
+  width: 22px !important;
+  height: 22px !important;
+  background: url(../../../assets/icons/logo_tiles3.png) -22px 0 no-repeat !important;
+  background-position-x: -22px;
+  background-position-y: 0px;
+  background-size: auto auto;
+  background-size: 22px auto !important;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+
+
+.logoTile.Ford {
+  background-position: 0 -0px !important;
+}
+
+.logoTile.Mazda {
+  background-position: 0 -22px !important;
+}
+
+.logoTile.Volvo {
+  background-position: 0 -44px !important;
+}
+
+.logoTile.Jaguar {
+  background-position: 0 -66px !important;
+}
+
+.logoTile.Audi {
+  background-position: 0 -88px !important;
+}
+
+.logoTile.MercedesBenz {
+  background-position: 0 -110px !important;
+}
+
+.logoTile.Mitsubishi {
+  background-position: 0 -132px !important;
+}
+
+.logoTile.smart {
+  background-position: 0 -154px !important;
+}
+
+.logoTile.Smart {
+  background-position: 0 -154px !important;
+}
+
+.logoTile.Chrysler {
+  background-position: 0 -176px !important;
+}
+
+.logoTile.Dodge {
+  background-position: 0 -198px !important;
+}
+
+.logoTile.Jeep {
+  background-position: 0 -220px !important;
+}
+
+.logoTile.Volkswagen {
+  background-position: 0 -242px !important;
+}
+
+.logoTile.Fiat {
+  background-position: 0 -264px !important;
+}
+
+.logoTile.BMW {
+  background-position: 0 -286px !important;
+}
+
+.logoTile.AlfaRomeo {
+  background-position: 0 -308px !important;
+}
+
+.logoTile.Chevrolet {
+  background-position: 0 -330px !important;
+}
+
+.logoTile.Opel {
+  background-position: 0 -352px !important;
+}
+
+.logoTile.Renault {
+  background-position: 0 -374px !important;
+}
+
+.logoTile.Mahindra {
+  background-position: 0 -396px !important;
+}
+
+.logoTile.Hummer {
+  background-position: 0 -418px !important;
+}
+
+.logoTile.Kia {
+  background-position: 0 -440px !important;
+}
+
+.logoTile.Isuzu {
+  background-position: 0 -462px !important;
+}
+
+.logoTile.Hyundai {
+  background-position: 0 -484px !important;
+}
+
+.logoTile.Daihatsu {
+  background-position: 0 -506px !important;
+}
+
+.logoTile.Citroen {
+  background-position: 0 -528px !important;
+}
+
+.logoTile.Toyota {
+  background-position: 0 -550px !important;
+}
+
+.logoTile.Subaru {
+  background-position: 0 -572px !important;
+}
+
+.logoTile.Suzuki {
+  background-position: 0 -594px !important;
+}
+
+.logoTile.LandRover {
+  background-position: 0 -616px !important;
+}
+
+.logoTile.Lexus {
+  background-position: 0 -638px !important;
+}
+
+.logoTile.Honda {
+  background-position: 0 -660px !important;
+}
+
+.logoTile.Nissan {
+  background-position: 0 -682px !important;
+}
+
+.logoTile.Proton {
+  background-position: 0 -704px !important;
+}
+
+.logoTile.SsangYong {
+  background-position: 0 -726px !important;
+}
+
+.logoTile.Ssangyong {
+  background-position: 0 -726px !important;
+}
+
+.logoTile.TATA {
+  background-position: 0 -748px !important;
+}
+
+.logoTile.Tata {
+  background-position: 0 -748px !important;
+}
+
+.logoTile.CAM {
+  background-position: 0 -770px !important;
+}
+
+.logoTile.Chana {
+  background-position: 0 -792px !important;
+}
+
+.logoTile.GWM {
+  background-position: 0 -814px !important;
+}
+
+.logoTile.AstonMartin {
+  background-position: 0 -836px !important;
+}
+
+.logoTile.Ferrari {
+  background-position: 0 -858px !important;
+}
+
+.logoTile.Lamborghini {
+  background-position: 0 -880px !important;
+}
+
+.logoTile.Porsche {
+  background-position: 0 -902px !important;
+}
+
+.logoTile.MINI {
+  background-position: 0 -924px !important;
+}
+
+.logoTile.Mini {
+  background-position: 0 -924px !important;
+}
+
+.logoTile.Peugeot {
+  background-position: 0 -946px !important;
+}
+
+.logoTile.Maserati {
+  background-position: 0 -968px !important;
+}
+
+.logoTile.Bentley {
+  background-position: 0 -990px !important;
+}
+
+.logoTile.Chery {
+  background-position: 0 -1012px !important;
+}
+
+.logoTile.Geely {
+  background-position: 0 -1034px !important;
+}
+
+.logoTile.Zotye {
+  background-position: 0 -1056px !important;
+}
+
+.logoTile.ZXAuto {
+  background-position: 0 -1078px !important;
+}
+
+.logoTile.Cadillac {
+  background-position: 0 -1100px !important;
+}
+
+.logoTile.AC {
+  background-position: 0 -1122px !important;
+}
+
+.logoTile.Asia {
+  background-position: 0 -1144px !important;
+}
+
+.logoTile.Austin {
+  background-position: 0 -1166px !important;
+}
+
+.logoTile.CMC {
+  background-position: 0 -1188px !important;
+}
+
+.logoTile.LTI {
+  background-position: 0 -1210px !important;
+}
+
+.logoTile.DFM {
+  background-position: 0 -1232px !important;
+}
+
+.logoTile.Daewoo {
+  background-position: 0 -1254px !important;
+}
+
+.logoTile.Daimler {
+  background-position: 0 -1276px !important;
+}
+
+.logoTile.Datsun {
+  background-position: 0 -1298px !important;
+}
+
+.logoTile.Foton {
+  background-position: 0 -1320px !important;
+}
+
+.logoTile.Fudi {
+  background-position: 0 -1342px !important;
+}
+
+.logoTile.Gonow {
+  background-position: 0 -1364px !important;
+}
+
+.logoTile.Iveco {
+  background-position: 0 -1386px !important;
+}
+
+.logoTile.JinBei {
+  background-position: 0 -1408px !important;
+}
+
+.logoTile.Lada {
+  background-position: 0 -1430px !important;
+}
+
+.logoTile.Lotus {
+  background-position: 0 -1452px !important;
+}
+
+.logoTile.MG {
+  background-position: 0 -1474px !important;
+}
+
+.logoTile.Meiya {
+  background-position: 0 -1496px !important;
+}
+
+.logoTile.RollsRoyce {
+  background-position: 0 -1518px !important;
+}
+
+.logoTile.Rover {
+  background-position: 0 -1540px !important;
+}
+
+.logoTile.Soyat {
+  background-position: 0 -1562px !important;
+}
+
+.logoTile.Morris {
+  background-position: 0 -1584px !important;
+}
+
+.logoTile.Abarth {
+  background-position: 0 -1606px !important;
+}
+
+.logoTile.JMC {
+  background-position: 0 -1628px !important;
+}
+
+.logoTile.McLaren {
+  background-position: 0 -1650px !important;
+}
+
+.logoTile.Triumph {
+  background-position: 0 -1672px !important;
+}
+
+.logoTile.Packard {
+  background-position: 0 -1694px !important;
+}
+
+.logoTile.Mercury {
+  background-position: 0 -1716px !important;
+}
+
+.logoTile.DeSoto {
+  background-position: 0 -1738px !important;
+}
+
+.logoTile.Plymouth {
+  background-position: 0 -1760px !important;
+}
+
+.logoTile.Buick {
+  background-position: 0 -1782px !important;
+}
+
+.logoTile.Studebaker {
+  background-position: 0 -1804px !important;
+}
+
+.logoTile.Infiniti {
+  background-position: 0 -1826px !important;
+}
+
+.logoTile.Caterham {
+  background-position: 0 -1848px !important;
+}
+
+.logoTile.DFSK {
+  background-position: 0 -1870px !important;
+}
+
+.logoTile.TVR {
+  background-position: 0 -1892px !important;
+}
+
+.logoTile.Hino {
+  background-position: 0 -1914px !important;
+}
+
+.logoTile.Pontiac {
+  background-position: 0 -1936px !important;
+}
+
+.logoTile.Holden {
+  background-position: 0 -1958px !important;
+}
+
+.logoTile.Morgan {
+  background-position: 0 -1980px !important;
+}
+
+.logoTile.Lancia {
+  background-position: 0 -2002px !important;
+}
+
+.logoTile.Noble {
+  background-position: 0 -2024px !important;
+}
+
+.logoTile.Leyland {
+  background-position: 0 -2046px !important;
+}
+
+.logoTile.FAW {
+  background-position: 0 -2068px !important;
+}
+
+.logoTile.Willys {
+  background-position: 0 -2090px !important;
+}
+
+.logoTile.Aprilia {
+  background-position: 0 -2112px !important;
+}
+
+.logoTile.Beta {
+  background-position: 0 -2134px !important;
+}
+
+.logoTile.BigBoy {
+  background-position: 0 -2156px !important;
+}
+
+.logoTile.Buell {
+  background-position: 0 -2178px !important;
+}
+
+.logoTile.CanAm {
+  background-position: 0 -2200px !important;
+}
+
+.logoTile.Ducati {
+  background-position: 0 -2222px !important;
+}
+
+.logoTile.HarleyDavidson {
+  background-position: 0 -2244px !important;
+}
+
+.logoTile.Husqvarna {
+  background-position: 0 -2266px !important;
+}
+
+.logoTile.Kawasaki {
+  background-position: 0 -2288px !important;
+}
+
+.logoTile.KTM {
+  background-position: 0 -2310px !important;
+}
+
+.logoTile.Kymco {
+  background-position: 0 -2332px !important;
+}
+
+.logoTile.Loncin {
+  background-position: 0 -2354px !important;
+}
+
+.logoTile.MV {
+  background-position: 0 -2376px !important;
+}
+
+.logoTile.RegalRaptor {
+  background-position: 0 -2398px !important;
+}
+
+.logoTile.RoyalEnfield {
+  background-position: 0 -2420px !important;
+}
+
+.logoTile.Vespa {
+  background-position: 0 -2442px !important;
+}
+
+.logoTile.Yamaha {
+  background-position: 0 -2464px !important;
+}
+
+.logoTile.Freightliner {
+  background-position: 0 -2486px !important;
+}
+
+.logoTile.International {
+  background-position: 0 -2508px !important;
+}
+
+.logoTile.Scania {
+  background-position: 0 -2530px !important;
+}
+
+.logoTile.MAN {
+  background-position: 0 -2552px !important;
+}
+
+.logoTile.MercedesAMG {
+  background-position: 0 -2574px !important;
+}
+
+.logoTile.MercedesMaybach {
+  background-position: 0 -2596px !important;
+}
+
+.logoTile.Changan {
+  background-position: 0 -2618px !important;
+}
