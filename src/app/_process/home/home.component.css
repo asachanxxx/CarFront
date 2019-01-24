@@ -1,3 +1,17 @@
+.header {
+  border-radius: 6px;
+}
+
+.blue{
+background-color: #012243;
+}
+
+.newCarsMain .Column .header h3 {
+  color: #fff;
+  margin: 0 0 15px;
+  font-size: 24px;
+}
+
 .segmant-separator{
 
   background-color: #3e3e3e;
@@ -127,6 +141,7 @@ ul.listaFooter {
 .catalogueList ul li.icon {
   margin: 0;
   padding: 5px 0;
+  text-align: left;
 }
 
 .catalogueList ul li {

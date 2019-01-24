@@ -6976,7 +6976,7 @@ table>tbody>tr>td>span.footable-toggle {
 .dealer-box {
   padding: 40px 30px;
   clear: both;
-  margin-bottom: 80px;
+  margin-bottom: 20px;
 }
 .red-bg {
   background: #db2d2e;
@@ -7020,7 +7020,7 @@ table>tbody>tr>td>span.footable-toggle {
 }
 
 .bg-17 {
-  background-image: url(../../assets/img/cars/15.jpg);
+  background-image: url(../../assets/img/banners/banner_blank_840x380.jpg);
   background-clip: initial;
   background-color: #f6f6f6;
   background-origin: initial;
