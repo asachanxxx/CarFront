@@ -8,12 +8,29 @@ import { ScriptLoaderService } from '../../_services/script-loader.service';
 })
 export class HomeComponent implements OnInit, AfterViewInit {
 
-  constructor(private _script: ScriptLoaderService) { }
+  items: any;
+  selectedMakeId:number;
+  
+  constructor(private _script: ScriptLoaderService) {
+    this.items = [];
+    console.log(this.items);
+    this.items.push({ id: 1, name: 'New item' })
+    this.items.push({ id: 1, name: 'New item2' })
+    
+  }
 
-  ngOnInit() {}
+  
+
+  ngOnInit() {
+
+  }
 
   ngAfterViewInit() {
     this._script.load('./assets/js/scripts/dashboard_visitors.js');
   }
+
+
+
+
 
 }

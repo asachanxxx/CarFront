@@ -2,6 +2,7 @@
 ** FORMS
 */
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
+@import "~@ng-select/ng-select/themes/default.theme.css";
 
 .clf:after,
 .clf:before {
@@ -7020,9 +7021,9 @@ table>tbody>tr>td>span.footable-toggle {
 }
 
 .bg-17 {
-  background-image: url(../../assets/img/banners/banner_blank_840x380.jpg);
+  /* background-image: url(../../assets/img/banners/banner_blank_840x380.jpg); */
   background-clip: initial;
-  background-color: #f6f6f6;
+  background-color: #FFF;
   background-origin: initial;
   background-position: center center;
   background-repeat: no-repeat;

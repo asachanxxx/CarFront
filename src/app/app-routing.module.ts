@@ -1,15 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
+import { CommonModule } from '@angular/common';
 import { LayoutComponent } from './/layouts/layout.component';
 
 import { HomeComponent } from './_process/home/home.component';
 import { DashboardEcommerceComponent } from './pages/dashboard-ecommerce/dashboard-ecommerce.component';
-import { DashboardBlogComponent } from './pages/dashboard-blog/dashboard-blog.component';
-import { Dashboard4Component } from './pages/dashboard-4/dashboard-4.component';
-import { Dashboard5Component } from './pages/dashboard-5/dashboard-5.component';
-import { Dashboard6Component } from './pages/dashboard-6/dashboard-6.component';
-import { Dashboard7Component } from './pages/dashboard-7/dashboard-7.component';
+
 
 import { ColorsComponent } from './pages/ui/colors/colors.component';
 import { TypographyComponent } from './pages/ui/typography/typography.component';
@@ -22,53 +18,6 @@ import { TooltipComponent } from './pages/ui/tooltip/tooltip.component';
 import { BadgesProgressComponent } from './pages/ui/badges-progress/badges-progress.component';
 import { ListComponent } from './pages/ui/list/list.component';
 import { IdleTimerComponent } from './pages/ui/idle-timer/idle-timer.component';
-import { ClipboardComponent } from './pages/ui/clipboard/clipboard.component';
-
-import { ButtonDefaultComponent } from './pages/ui/buttons/button-default/button-default.component';
-import { ButtonRoundedComponent } from './pages/ui/buttons/button-rounded/button-rounded.component';
-import { ButtonSquareComponent } from './pages/ui/buttons/button-square/button-square.component';
-import { ButtonAirComponent } from './pages/ui/buttons/button-air/button-air.component';
-import { ButtonIconComponent } from './pages/ui/buttons/button-icon/button-icon.component';
-import { ButtonLabeledComponent } from './pages/ui/buttons/button-labeled/button-labeled.component';
-import { ButtonAnimatedComponent } from './pages/ui/buttons/button-animated/button-animated.component';
-import { ButtonFabComponent } from './pages/ui/buttons/button-fab/button-fab.component';
-import { ButtonGroupsComponent } from './pages/ui/buttons/button-groups/button-groups.component';
-import { ButtonDropdownsComponent } from './pages/ui/buttons/button-dropdowns/button-dropdowns.component';
-import { ButtonSocialComponent } from './pages/ui/buttons/button-social/button-social.component';
-
-import { WidgetsStatisticsComponent } from './pages/widgets-statistics/widgets-statistics.component';
-import { WidgetsListComponent } from './pages/widgets-list/widgets-list.component';
-import { WidgetsUserComponent } from './pages/widgets-user/widgets-user.component';
-import { WidgetsBlogComponent } from './pages/widgets-blog/widgets-blog.component';
-
-import { InputsComponent } from './pages/forms/inputs/inputs.component';
-import { SwitchComponent } from './pages/forms/switch/switch.component';
-import { CheckboxRadioComponent } from './pages/forms/checkbox-radio/checkbox-radio.component';
-import { InputGroupsComponent } from './pages/forms/input-groups/input-groups.component';
-import { FormLayoutsComponent } from './pages/forms/form-layouts/form-layouts.component';
-import { InputMasksComponent } from './pages/forms/input-masks/input-masks.component';
-import { FormValidationComponent } from './pages/forms/form-validation/form-validation.component';
-import { TextEditorsComponent } from './pages/forms/text-editors/text-editors.component';
-import { FormAdvancedComponent } from './pages/forms/form-advanced/form-advanced.component';
-import { AutocompleteComponent } from './pages/forms/autocomplete/autocomplete.component';
-import { WizardComponent } from './pages/forms/wizard/wizard.component';
-
-import { TablesComponent } from './pages/tables/tables.component';
-import { DatatablesComponent } from './pages/datatables/datatables.component';
-
-import { ChartjsComponent } from './pages/charts/chartjs/chartjs.component';
-import { MorrisChartComponent } from './pages/charts/morris-chart/morris-chart.component';
-import { PeityChartComponent } from './pages/charts/peity-chart/peity-chart.component';
-import { SparklineChartComponent } from './pages/charts/sparkline-chart/sparkline-chart.component';
-
-import { MapsVectorComponent } from './pages/maps-vector/maps-vector.component';
-
-import { IconsComponent } from './pages/ui/icons/icons.component';
-
-import { MailboxComponent } from './pages/mailbox/mailbox.component';
-import { BlogListComponent } from './pages/blog/blog-list/blog-list.component';
-import { ArticleComponent } from './pages/blog/article/article.component';
-import { CalendarComponent } from './pages/calendar/calendar.component';
 import { ProductsListComponent } from './pages/ecommerce/products-list/products-list.component';
 import { AddProductComponent } from './pages/ecommerce/add-product/add-product.component';
 import { OrdersListComponent } from './pages/ecommerce/orders-list/orders-list.component';
@@ -76,15 +25,6 @@ import { OrderDetailsComponent } from './pages/ecommerce/order-details/order-det
 import { InvoiceComponent } from './pages/ecommerce/invoice/invoice.component';
 import { CustomersComponent } from './pages/ecommerce/customers/customers.component';
 
-import { FaqComponent } from './pages/faq/faq.component';
-import { SearchComponent } from './pages/search/search.component';
-import { TimelineComponent } from './pages/timeline/timeline.component';
-import { PricingTable1Component } from './pages/pricing-table-1/pricing-table-1.component';
-import { PricingTable2Component } from './pages/pricing-table-2/pricing-table-2.component';
-import { PricingTable3Component } from './pages/pricing-table-3/pricing-table-3.component';
-import { PricingTable4Component } from './pages/pricing-table-4/pricing-table-4.component';
-import { PricingTable5Component } from './pages/pricing-table-5/pricing-table-5.component';
-import { PricingTable6Component } from './pages/pricing-table-6/pricing-table-6.component';
 import { LoginComponent } from './pages/login/login.component';
 import { Login2Component } from './pages/login-2/login-2.component';
 import { Login3Component } from './pages/login-3/login-3.component';
@@ -98,10 +38,12 @@ import { Error4042Component } from './pages/error-404-2/error-404-2.component';
 import { Error403Component } from './pages/error-403/error-403.component';
 import { Error500Component } from './pages/error-500/error-500.component';
 import { MaintenanceComponent } from './pages/maintenance/maintenance.component';
+import { FormsModule } from '@angular/forms';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 
 const routes: Routes = [
-    {path: '', redirectTo: 'index', pathMatch: 'full'},
+    { path: '', redirectTo: 'index', pathMatch: 'full' },
     {
         "path": "",
         "component": LayoutComponent,
@@ -333,7 +275,7 @@ const routes: Routes = [
             {
                 path: "ecommerce/customers",
                 component: CustomersComponent
-            },            
+            },
             // {
             //     "path": "faq",
             //     "component": FaqComponent
@@ -432,97 +374,61 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [
-    HomeComponent,
-     DashboardEcommerceComponent,
-    // DashboardBlogComponent,
-    // Dashboard4Component,
-    // Dashboard5Component,
-    // Dashboard6Component,
-    // Dashboard7Component,
-     ColorsComponent,
-    TypographyComponent,
-    PanelsComponent,
-    TabsLineComponent,
-    TabsPillComponent,
-    AlertsComponent,
-    ToastrComponent,
-    TooltipComponent,
-    BadgesProgressComponent,
-    ListComponent,
-    IdleTimerComponent,
-    // ClipboardComponent,
-    // ButtonDefaultComponent,
-    // ButtonRoundedComponent,
-    // ButtonSquareComponent,
-    // ButtonAirComponent,
-    // ButtonIconComponent,
-    // ButtonLabeledComponent,
-    // ButtonAnimatedComponent,
-    // ButtonFabComponent,
-    // ButtonGroupsComponent,
-    // ButtonDropdownsComponent,
-    // ButtonSocialComponent,
-    // WidgetsStatisticsComponent,
-    // WidgetsListComponent,
-    // WidgetsUserComponent,
-    // WidgetsBlogComponent,
-    // InputsComponent,
-    // SwitchComponent,
-    // CheckboxRadioComponent,
-    // InputGroupsComponent,
-    // FormLayoutsComponent,
-    // InputMasksComponent,
-    // FormValidationComponent,
-    // TextEditorsComponent,
-    // FormAdvancedComponent,
-    // AutocompleteComponent,
-    // WizardComponent,
-    // TablesComponent,
-    // DatatablesComponent,
-    // ChartjsComponent,
-    // MorrisChartComponent,
-    // PeityChartComponent,
-    // SparklineChartComponent,
-    // MapsVectorComponent,
-    // IconsComponent,
-    // MailboxComponent,
-    // BlogListComponent,
-    // ArticleComponent,
-    // CalendarComponent,
-    ProductsListComponent,
-    AddProductComponent,
-    OrdersListComponent,
-    OrderDetailsComponent,
-    InvoiceComponent,
-    CustomersComponent,
-    // FaqComponent,
-    // SearchComponent,
-    // TimelineComponent,
-    // PricingTable1Component,
-    // PricingTable2Component,
-    // PricingTable3Component,
-    // PricingTable4Component,
-    // PricingTable5Component,
-    // PricingTable6Component,
-    LoginComponent,
-    Login2Component,
-    Login3Component,
-    Login4Component,
-    Login5Component,
-    LockscreenComponent,
-    ForgotPasswordComponent,
-    ProfileComponent,
-    Error404Component,
-    Error4042Component,
-    Error403Component,
-    Error500Component,
-    MaintenanceComponent,
-  ],
-  imports: [ RouterModule.forRoot(routes) ],
-  exports: [ 
-    RouterModule,
-  ]
+    declarations: [
+        HomeComponent,
+        DashboardEcommerceComponent,
+
+        ColorsComponent,
+        TypographyComponent,
+        PanelsComponent,
+        TabsLineComponent,
+        TabsPillComponent,
+        AlertsComponent,
+        ToastrComponent,
+        TooltipComponent,
+        BadgesProgressComponent,
+        ListComponent,
+        IdleTimerComponent,
+
+        ProductsListComponent,
+        AddProductComponent,
+        OrdersListComponent,
+        OrderDetailsComponent,
+        InvoiceComponent,
+        CustomersComponent,
+        // FaqComponent,
+        // SearchComponent,
+        // TimelineComponent,
+        // PricingTable1Component,
+        // PricingTable2Component,
+        // PricingTable3Component,
+        // PricingTable4Component,
+        // PricingTable5Component,
+        // PricingTable6Component,
+        LoginComponent,
+        Login2Component,
+        Login3Component,
+        Login4Component,
+        Login5Component,
+        LockscreenComponent,
+        ForgotPasswordComponent,
+        ProfileComponent,
+        Error404Component,
+        Error4042Component,
+        Error403Component,
+        Error500Component,
+        MaintenanceComponent,
+    ],
+    imports: [
+        RouterModule.forRoot(routes),
+        FormsModule,
+        NgSelectModule,
+        CommonModule
+    
+    ],
+    exports: [
+        RouterModule,
+    ]
 })
 
 export class AppRoutingModule { }

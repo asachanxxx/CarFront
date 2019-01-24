@@ -1,3 +1,23 @@
+.border-red{
+  border: 1px solid #c5161d;
+}
+
+.background-red{
+  background-color:   #c5161d;
+}
+
+.for-color-white{
+  color: #fff;
+}
+
+.button-padding{
+
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+}
+
+
 .header {
   border-radius: 6px;
 }
@@ -120,7 +140,7 @@ ul.listaFooter {
 
 
 
-
+/* *************************** catalogueList ***************************************************** */
 
 
 .catalogueList {
