@@ -1,45 +1,75 @@
 <br>
-
-<!-- <div class="slider-content  "> -->
-
 <div class="row">
   <div class="col-md-12">
     <div class="card">
-      <div class="card-body">
+      <div class="card-body" style="padding-bottom: 0; padding-top:0;">
         <div class="row">
-          <div class="col-md-5">
-            <div class="ibox">
-              <div class="ibox-head background-red for-color-white">
-                <div class="ibox-title">
-                  <h4> Want to find somethig?</h4>
-                </div>
-              </div>
-              <div class="ibox-body border-red">
-                <div class="form-group">
-                  <label class="form-control-label">Make</label>
-                  <ng-select  [items]="items" bindLabel="name" autofocus bindValue="id" [(ngModel)]="selectedMakeId">
-                  </ng-select>
+         
+          <div class="col-md-4">
+           
 
-
-                  <label class="form-control-label">Model</label>
-                  <ng-select  [items]="items" bindLabel="name" autofocus bindValue="id" [(ngModel)]="selectedModelId">
-                  </ng-select>
-
-                  <label class="form-control-label">Year</label>
-                  <ng-select  [items]="items" bindLabel="name" autofocus bindValue="id" [(ngModel)]="selectedYearId">
-                  </ng-select>
-                  <div class="button-padding">
-                  <button class="btn btn-danger">Find now</button>
+                <div class="row">
+                  <div class="col-md-12 pt-3">
+                      <h1 class="text-center to-uppercase"  style= "color: #c5161d;"> Welcome to  <span> <b> sellmycar.com </b></span> </h1>
                   </div>
                 </div>
-              
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="text-center"  style= "color: #c5161d;"> The most stunning online car buying and aution portal</h3>
+                    </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-12">
+                          <p>you can buy and see your car with highest level of satisfaction and safely and earn extra money by putting your car in our auction.
+                            All our cars are added with extra care and with much more details. so there can be no room for imposter to make you fool
+                          </p>
+                          
+                      </div>
+                    </div>
+          </div>
+
+
+         
+          <div class="col-md-3" style="padding-left: 0;">
+            <div class="ibox" style="margin-bottom: 0;">
+              <div class="ibox-head background-red for-color-white" style="
+              border-bottom-width: 0px;">
+                <div class="ibox-title">
+                  <h4 class="to-uppercase"> Want to find somethig?</h4>
+                </div>
+              </div>
+              <div class="ibox-body border-red" style="background-color: #c5161d;    padding-top: 0px;">
+                <div class="form-group">
+                  <label class="form-control-label color-yellow to-uppercase">Make</label>
+                  <ng-select  [items]="_allMakess"  #select_make  (change)="ChangeEventMake(select_make)"  bindLabel="Text" autofocus bindValue="id" >
+                  </ng-select>
+
+
+                  <label class="form-control-label color-yellow to-uppercase">Model</label>
+                  <ng-select [items]="_allModels" #select_model  (change)="ChangeEventModel(select_model)" name="selectedMode" bindLabel="Text" autofocus bindValue="id" >
+                  </ng-select>
+
+                  <label class="form-control-label color-yellow to-uppercase">Year</label>
+
+                  <ng-select [items]="_allYearMakes" #select_year  (change)="ChangeEventYear(select_year)" name="selectedYear" bindLabel="Text" autofocus bindValue="id" >
+                  </ng-select>
+
+                  <div class="button-padding">
+                    <button class="btn btn-yellow to-uppercase" type="button" (click)="Wanttofindcar()" >Find now</button>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
-          <div class="col-md-7 bg-17 image-overelly">
+
+
+          <div class="col-md-5 bg-17 image-overelly">
             <img src="../../../assets//img//banners/banner_blank_840x380.jpg" alt="Banner sale">
 
           </div>
+
+
         </div>
       </div>
     </div>
@@ -50,91 +80,138 @@
 
 </div>
 
-
-
-
-
-
-
-<div class="row" id="ads">
-    <!-- Category Card -->
-    <div class="col-md-4">
-        <div class="card rounded">
-            <div class="card-image">
-                <span class="card-notify-badge">Low KMS</span>
-                <span class="card-notify-year">2018</span>
-                <img class="img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC011A021001.jpg&width=440&height=262" alt="Alternate Text" />
-            </div>
-            <div class="card-image-overlay m-auto">
-                <span class="card-detail-badge">Used</span>
-                <span class="card-detail-badge">$28,000.00</span>
-                <span class="card-detail-badge">13000 Kms</span>
-            </div>
-            <div class="card-body text-center">
-                <div class="ad-title m-auto">
-                    <h5>Honda Accord LX</h5>
-                </div>
-                <a class="ad-btn" href="#">View</a>
-            </div>
+<div class="row" id="ads" style="margin-top: 0px;">
+  <!-- Category Card -->
+  <div class="col-md-2" style="margin-top: 10px;">
+    <div class="card rounded">
+      <div class="card-image">
+        <span class="card-notify-badge">Low KMS</span>
+        <span class="card-notify-year">2018</span>
+        <img class="img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC011A021001.jpg&width=440&height=262"
+          alt="Alternate Text" />
+      </div>
+      <div class="card-image-overlay m-auto">
+        <span class="card-detail-badge">Used</span>
+        <span class="card-detail-badge">$28,000.00</span>
+        <span class="card-detail-badge">13000 Kms</span>
+      </div>
+      <div class="card-body text-center">
+        <div class="ad-title m-auto">
+          <h5>Honda Accord LX</h5>
         </div>
+        <a class="ad-btn" href="#">View</a>
+      </div>
     </div>
-    <div class="col-md-4">
-        <div class="card rounded">
-            <div class="card-image">
-                <span class="card-notify-badge">Fully-Loaded</span>
-                <span class="card-notify-year">2017</span>
-                <img class="img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=CAC80HOC021B121001.jpg&width=440&height=262" alt="Alternate Text" />
-            </div>
-            <div class="card-image-overlay m-auto">
-                <span class="card-detail-badge">Used</span>
-                <span class="card-detail-badge">$28,000.00</span>
-                <span class="card-detail-badge">13000 Kms</span>
-            </div>
-            <div class="card-body text-center">
-                <div class="ad-title m-auto">
-                    <h5>Honda CIVIC HATCHBACK LS</h5>
-                </div>
-                <a class="ad-btn" href="#">View</a>
-            </div>
+  </div>
+  <div class="col-md-2" style="margin-top: 10px;">
+    <div class="card rounded">
+      <div class="card-image">
+        <span class="card-notify-badge">Fully-Loaded</span>
+        <span class="card-notify-year">2017</span>
+        <img class="img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=CAC80HOC021B121001.jpg&width=440&height=262"
+          alt="Alternate Text" />
+      </div>
+      <div class="card-image-overlay m-auto">
+        <span class="card-detail-badge">Used</span>
+        <span class="card-detail-badge">$28,000.00</span>
+        <span class="card-detail-badge">13000 Kms</span>
+      </div>
+      <div class="card-body text-center">
+        <div class="ad-title m-auto">
+          <h5>Honda CIVIC HATCHBACK LS</h5>
         </div>
+        <a class="ad-btn" href="#">View</a>
+      </div>
     </div>
+  </div>
 
-    <div class="col-md-4">
-        <div class="card rounded">
-            <div class="card-image">
-                <span class="card-notify-badge">Price Reduced</span>
-                <span class="card-notify-year">2018</span>
-                <img class="img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC091A021001.jpg&width=440&height=262" alt="Alternate Text" />
-            </div>
-            <div class="card-image-overlay m-auto">
-                <span class="card-detail-badge">Used</span>
-                <span class="card-detail-badge">$22,000.00</span>
-                <span class="card-detail-badge">8000 Kms</span>
-            </div>
-            <div class="card-body text-center">
-                <div class="ad-title m-auto">
-                    <h5>Honda Accord Hybrid LT</h5>
-                </div>
-                <a class="ad-btn" href="#">View</a>
-            </div>
+  <div class="col-md-2" style="margin-top: 10px;">
+    <div class="card rounded">
+      <div class="card-image">
+        <span class="card-notify-badge">Price Reduced</span>
+        <span class="card-notify-year">2018</span>
+        <img class="img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC091A021001.jpg&width=440&height=262"
+          alt="Alternate Text" />
+      </div>
+      <div class="card-image-overlay m-auto">
+        <span class="card-detail-badge">Used</span>
+        <span class="card-detail-badge">$22,000.00</span>
+        <span class="card-detail-badge">8000 Kms</span>
+      </div>
+      <div class="card-body text-center">
+        <div class="ad-title m-auto">
+          <h5>Honda Accord Hybrid LT</h5>
         </div>
+        <a class="ad-btn" href="#">View</a>
+      </div>
     </div>
+  </div>
+
+  <div class="col-md-2" style="margin-top: 10px;">
+    <div class="card rounded">
+      <div class="card-image">
+        <span class="card-notify-badge">Price Reduced</span>
+        <span class="card-notify-year">2018</span>
+        <img class="img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC091A021001.jpg&width=440&height=262"
+          alt="Alternate Text" />
+      </div>
+      <div class="card-image-overlay m-auto">
+        <span class="card-detail-badge">Used</span>
+        <span class="card-detail-badge">$22,000.00</span>
+        <span class="card-detail-badge">8000 Kms</span>
+      </div>
+      <div class="card-body text-center">
+        <div class="ad-title m-auto">
+          <h5>Honda Accord Hybrid LT</h5>
+        </div>
+        <a class="ad-btn" href="#">View</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-2" style="margin-top: 10px;">
+    <div class="card rounded">
+      <div class="card-image">
+        <span class="card-notify-badge">Price Reduced</span>
+        <span class="card-notify-year">2018</span>
+        <img class="img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC091A021001.jpg&width=440&height=262"
+          alt="Alternate Text" />
+      </div>
+      <div class="card-image-overlay m-auto">
+        <span class="card-detail-badge">Used</span>
+        <span class="card-detail-badge">$22,000.00</span>
+        <span class="card-detail-badge">8000 Kms</span>
+      </div>
+      <div class="card-body text-center">
+        <div class="ad-title m-auto">
+          <h5>Honda Accord Hybrid LT</h5>
+        </div>
+        <a class="ad-btn" href="#">View</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-2" style="margin-top: 10px;">
+    <div class="card rounded">
+      <div class="card-image">
+        <span class="card-notify-badge">Price Reduced</span>
+        <span class="card-notify-year">2018</span>
+        <img class="img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC091A021001.jpg&width=440&height=262"
+          alt="Alternate Text" />
+      </div>
+      <div class="card-image-overlay m-auto">
+        <span class="card-detail-badge">Used</span>
+        <span class="card-detail-badge">$22,000.00</span>
+        <span class="card-detail-badge">8000 Kms</span>
+      </div>
+      <div class="card-body text-center">
+        <div class="ad-title m-auto">
+          <h5>Honda Accord Hybrid LT</h5>
+        </div>
+        <a class="ad-btn" href="#">View</a>
+      </div>
+    </div>
+  </div>
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <div class="row">
@@ -200,146 +277,185 @@
   </div>
 </div>
 
-<!-- Second Layor Of items ... Scroll item list ************************************************************************************************************* -->
 
-<div class="row">
-  <div class="col-xl-6">
-    <div class="ibox ibox-fullheight">
-      <div class="ibox-head">
-        <div class="ibox-title">Latest Cars</div>
-        <div class="ibox-tools">
-          <a class="dropdown-toggle" data-toggle="dropdown"><i class="ti-more-alt"></i></a>
-          <div class="dropdown-menu dropdown-menu-right">
-            <a class="dropdown-item"> <i class="ti-pencil"></i>Create</a>
-            <a class="dropdown-item"> <i class="ti-pencil-alt"></i>Edit</a>
-            <a class="dropdown-item"> <i class="ti-close"></i>Remove</a>
+
+
+
+
+
+
+
+<!-- myCarousel ************************************************************************************************************* -->
+
+
+
+<div id="sponsoredStyleSelectorSection" class="container hidden-sm">
+  <div class="text-center">
+    <div data-cmp="subheading" class="text-bold text-size-500 text-size-sm-600">Browse by Style</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6 col-sm-3 margin-bottom-4 text-center">
+      <div class="text-gray-darker text-bold text-link" href="/cars-for-sale/Truck/subject??vehicleStyleCodes=TRUCKS"
+        title="Truck" data-birf-log="component" data-birf-cmp="sty" data-birf-extra="{&quot;veh_sty&quot;:&quot;TRUCKS&quot;}">
+        <div data-cmp="itemCard" class="item-card row display-flex align-items-stretch flex-column">
+          <div class="col-xs-12 item-card-side"><img class="img-responsive margin-horizontal-auto" src="https://content.autotrader.com/content/dam/autotrader/homepage/styles/DefaultDesk_Style_TRUCKS.png"
+              width="224px" height="120px"></div>
+          <div class="col-xs-12 item-card-content display-flex flex-column justify-content-between">
+            <div class="item-card-body margin-bottom-auto">Truck</div>
           </div>
         </div>
       </div>
-      <div class="ibox-body">
-        <ul class="media-list media-list-divider">
-
-          <li class="media">
-            <a class="media-img pr-4" href="javascript:;">
-              <img src="./assets/img/blog/07.jpeg" alt="image" width="120" />
-            </a>
-            <div class="media-body d-flex">
-              <div class="flex-1">
-                <h5 class="media-heading">
-                  <a href="article.html">TOYOTA PRIUS S SAFETY PLUS 2018</a>
-                </h5>
-                <p class="font-13 text-light">Cillum in incididunt reprehenderit qui reprehenderit nulla ut sint</p>
-                <div class="font-13">
-                  <span class="mr-4">KMS:
-                    <span class="badge badge-success badge-pill ml-2">12,000</span>
-                  </span>
-                  <span class="mr-4">Capacity:
-                    <span class="badge badge-success badge-pill ml-2">1800 cc</span>
-                  </span>
-
-                  <span class="mr-4">Colour:
-                    <span class="badge badge-success badge-pill ml-2">White </span>
-                  </span>
-
-                  <span class="mr-4">Chassis:
-                    <span class="badge badge-success badge-pill ml-2">ZVW50</span>
-                  </span>
-
-
-                  <span class="text-muted mr-4"><i class="fa fa-heart mr-2"></i>56</span>
-                  <span class="text-muted"><i class="fa fa-comment mr-2"></i>124</span>
-                </div>
-              </div>
-              <div class="text-right" style="width:25%;">
-                <h3 class="mb-1 font-strong text-primary"><sup>Rs</sup>3,150,000</h3>
-                <div class="text-muted">views</div>
-              </div>
-            </div>
-          </li>
-
-
-
-        </ul>
+    </div>
+    <div class="col-xs-6 col-sm-3 margin-bottom-4 text-center">
+      <div class="text-gray-darker text-bold text-link" href="/cars-for-sale/SUV~Crossover/subject??vehicleStyleCodes=SUVCROSS"
+        title="SUV/Crossover" data-birf-log="component" data-birf-cmp="sty" data-birf-extra="{&quot;veh_sty&quot;:&quot;SUVCROSS&quot;}">
+        <div data-cmp="itemCard" class="item-card row display-flex align-items-stretch flex-column">
+          <div class="col-xs-12 item-card-side"><img class="img-responsive margin-horizontal-auto" src="https://content.autotrader.com/content/dam/autotrader/homepage/styles/DefaultDesk_Style_SUVCROSS.png"
+              width="224px" height="120px"></div>
+          <div class="col-xs-12 item-card-content display-flex flex-column justify-content-between">
+            <div class="item-card-body margin-bottom-auto">SUV/Crossover</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-6 col-sm-3 margin-bottom-4 text-center">
+      <div class="text-gray-darker text-bold text-link" href="/cars-for-sale/Sedan/subject??vehicleStyleCodes=SEDAN"
+        title="Sedan" data-birf-log="component" data-birf-cmp="sty" data-birf-extra="{&quot;veh_sty&quot;:&quot;SEDAN&quot;}">
+        <div data-cmp="itemCard" class="item-card row display-flex align-items-stretch flex-column">
+          <div class="col-xs-12 item-card-side"><img class="img-responsive margin-horizontal-auto" src="https://content.autotrader.com/content/dam/autotrader/homepage/styles/DefaultDesk_Style_SEDAN.png"
+              width="224px" height="120px"></div>
+          <div class="col-xs-12 item-card-content display-flex flex-column justify-content-between">
+            <div class="item-card-body margin-bottom-auto">Sedan</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-6 col-sm-3 margin-bottom-4 text-center">
+      <div class="text-gray-darker text-bold text-link" href="/cars-for-sale/Coupe/subject??vehicleStyleCodes=COUPE"
+        title="Coupe" data-birf-log="component" data-birf-cmp="sty" data-birf-extra="{&quot;veh_sty&quot;:&quot;COUPE&quot;}">
+        <div data-cmp="itemCard" class="item-card row display-flex align-items-stretch flex-column">
+          <div class="col-xs-12 item-card-side"><img class="img-responsive margin-horizontal-auto" src="https://content.autotrader.com/content/dam/autotrader/homepage/styles/DefaultDesk_Style_COUPE.png"
+              width="224px" height="120px"></div>
+          <div class="col-xs-12 item-card-content display-flex flex-column justify-content-between">
+            <div class="item-card-body margin-bottom-auto">Coupe</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-6 col-sm-3 margin-bottom-4 text-center">
+      <div class="text-gray-darker text-bold text-link" href="/cars-for-sale/Hatchback/subject??vehicleStyleCodes=HATCH"
+        title="Hatchback" data-birf-log="component" data-birf-cmp="sty" data-birf-extra="{&quot;veh_sty&quot;:&quot;HATCH&quot;}">
+        <div data-cmp="itemCard" class="item-card row display-flex align-items-stretch flex-column">
+          <div class="col-xs-12 item-card-side"><img class="img-responsive margin-horizontal-auto" src="https://content.autotrader.com/content/dam/autotrader/homepage/styles/DefaultDesk_Style_HATCH.png"
+              width="224px" height="120px"></div>
+          <div class="col-xs-12 item-card-content display-flex flex-column justify-content-between">
+            <div class="item-card-body margin-bottom-auto">Hatchback</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-6 col-sm-3 margin-bottom-4 text-center">
+      <div class="text-gray-darker text-bold text-link" href="/cars-for-sale/Van~Minivan/subject??vehicleStyleCodes=VANMV"
+        title="Van/Minivan" data-birf-log="component" data-birf-cmp="sty" data-birf-extra="{&quot;veh_sty&quot;:&quot;VANMV&quot;}">
+        <div data-cmp="itemCard" class="item-card row display-flex align-items-stretch flex-column">
+          <div class="col-xs-12 item-card-side"><img class="img-responsive margin-horizontal-auto" src="https://content.autotrader.com/content/dam/autotrader/homepage/styles/DefaultDesk_Style_VANMV.png"
+              width="224px" height="120px"></div>
+          <div class="col-xs-12 item-card-content display-flex flex-column justify-content-between">
+            <div class="item-card-body margin-bottom-auto">Van/Minivan</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-6 col-sm-3 margin-bottom-4 text-center">
+      <div class="text-gray-darker text-bold text-link" href="/cars-for-sale/Convertible/subject??vehicleStyleCodes=CONVERT"
+        title="Convertible" data-birf-log="component" data-birf-cmp="sty" data-birf-extra="{&quot;veh_sty&quot;:&quot;CONVERT&quot;}">
+        <div data-cmp="itemCard" class="item-card row display-flex align-items-stretch flex-column">
+          <div class="col-xs-12 item-card-side"><img class="img-responsive margin-horizontal-auto" src="https://content.autotrader.com/content/dam/autotrader/homepage/styles/DefaultDesk_Style_CONVERT.png"
+              width="224px" height="120px"></div>
+          <div class="col-xs-12 item-card-content display-flex flex-column justify-content-between">
+            <div class="item-card-body margin-bottom-auto">Convertible</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-6 col-sm-3 margin-bottom-4 text-center">
+      <div class="text-gray-darker text-bold text-link" href="/cars-for-sale/Wagon/subject??vehicleStyleCodes=WAGON"
+        title="Wagon" data-birf-log="component" data-birf-cmp="sty" data-birf-extra="{&quot;veh_sty&quot;:&quot;WAGON&quot;}">
+        <div data-cmp="itemCard" class="item-card row display-flex align-items-stretch flex-column">
+          <div class="col-xs-12 item-card-side"><img class="img-responsive margin-horizontal-auto" src="https://content.autotrader.com/content/dam/autotrader/homepage/styles/DefaultDesk_Style_WAGON.png"
+              width="224px" height="120px"></div>
+          <div class="col-xs-12 item-card-content display-flex flex-column justify-content-between">
+            <div class="item-card-body margin-bottom-auto">Wagon</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-
-
-
-
-
-
-  <div class="col-xl-6">
-    <div class="ibox ibox-fullheight">
-      <div class="ibox-head">
-        <div class="ibox-title">Best Sellers</div>
-        <div class="ibox-tools">
-          <a class="dropdown-toggle" data-toggle="dropdown"><i class="ti-more-alt"></i></a>
-          <div class="dropdown-menu dropdown-menu-right">
-            <a class="dropdown-item"> <i class="ti-pencil"></i>Create</a>
-            <a class="dropdown-item"> <i class="ti-pencil-alt"></i>Edit</a>
-            <a class="dropdown-item"> <i class="ti-close"></i>Remove</a>
+  <hr class="margin-vertical-5">
+  <div class="row margin-bottom-5">
+    <div class="col-xs-6 col-sm-3 margin-bottom-4 text-center">
+      <div class="text-gray-darker text-bold text-link" href="/cars-for-sale/AWD~4WD/subject??vehicleStyleCodes=AWD4WD"
+        title="AWD/4WD" data-birf-log="component" data-birf-cmp="sty" data-birf-extra="{&quot;veh_sty&quot;:&quot;AWD4WD&quot;}">
+        <div data-cmp="itemCard" class="item-card row display-flex align-items-stretch flex-column">
+          <div class="col-xs-12 item-card-side"><img class="img-responsive margin-horizontal-auto" src="https://content.autotrader.com/content/dam/autotrader/homepage/styles/DefaultDesk_Style_AWD4WD.png"
+              width="224px" height="120px"></div>
+          <div class="col-xs-12 item-card-content display-flex flex-column justify-content-between">
+            <div class="item-card-body margin-bottom-auto">AWD/4WD</div>
           </div>
         </div>
       </div>
-      <div class="ibox-body">
-        <ul class="media-list media-list-divider">
-
-          <li class="media">
-            <div class="row">
-              <div class="col-md-2 col-sm-12">
-                <a class="media-img" href="javascript:;">
-                  <img src="./assets/img/products/01.jpg" alt="image" height="100" />
-                </a>
-              </div>
-              <div class="col-md-10 col-sm-12">
-
-                <div class="media-body d-flex">
-                  <div class="row">
-                    <div class="col-md-10">
-                      <div class="flex-1">
-                        <h5 class="media-heading">
-                          <a href="javascript:;">TOYOTA PRIUS S SAFETY PLUS </a>
-                        </h5>
-                        <div class="h4 text-success">2018</div>
-                        <p class="font-13 text-light mb-1">Cillum in incididunt reprehenderit qui reprehenderit nulla
-                          ut
-                          sint</p>
-                        <div class="font-13">
-                          <span class="mr-4">KMS:
-                            <span class="badge badge-success badge-pill ml-2">12,000 KM</span>
-                          </span>
-                          <span class="mr-4">Capacity:
-                            <span class="badge badge-success badge-pill ml-2">1800 cc</span>
-                          </span>
-
-                          <span class="mr-4">Colour:
-                            <span class="badge badge-success badge-pill ml-2">White </span>
-                          </span>
-
-                          <span class="mr-4">Chassis:
-                            <span class="badge badge-success badge-pill ml-2">ZVW50</span>
-                          </span>
-
-                          <i class="la la-truck font-16 text-light" data-toggle="tooltip" data-original-title="Delivery"></i></div>
-                      </div>
-                    </div>
-                    <div class="col-md-2">
-                      <div class="text-right" style="width:25%;">
-                        <h3 class="mb-1 font-strong text-success"><sup>Rs</sup>4,450,000</h3>
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
+    </div>
+    <div class="col-xs-6 col-sm-3 margin-bottom-4 text-center">
+      <div class="text-gray-darker text-bold text-link" href="/cars-for-sale/Luxury/subject??vehicleStyleCodes=LUXURY"
+        title="Luxury" data-birf-log="component" data-birf-cmp="sty" data-birf-extra="{&quot;veh_sty&quot;:&quot;LUXURY&quot;}">
+        <div data-cmp="itemCard" class="item-card row display-flex align-items-stretch flex-column">
+          <div class="col-xs-12 item-card-side"><img class="img-responsive margin-horizontal-auto" src="https://content.autotrader.com/content/dam/autotrader/homepage/styles/DefaultDesk_Style_LUXURY.png"
+              width="224px" height="120px"></div>
+          <div class="col-xs-12 item-card-content display-flex flex-column justify-content-between">
+            <div class="item-card-body margin-bottom-auto">Luxury</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-6 col-sm-3 margin-bottom-4 text-center">
+      <div class="text-gray-darker text-bold text-link" href="/cars-for-sale/Hybrid~Electric/subject??vehicleStyleCodes=HYBEL"
+        title="Hybrid/Electric" data-birf-log="component" data-birf-cmp="sty" data-birf-extra="{&quot;veh_sty&quot;:&quot;HYBEL&quot;}">
+        <div data-cmp="itemCard" class="item-card row display-flex align-items-stretch flex-column">
+          <div class="col-xs-12 item-card-side"><img class="img-responsive margin-horizontal-auto" src="https://content.autotrader.com/content/dam/autotrader/homepage/styles/DefaultDesk_Style_HYBEL.png"
+              width="224px" height="120px"></div>
+          <div class="col-xs-12 item-card-content display-flex flex-column justify-content-between">
+            <div class="item-card-body margin-bottom-auto">Hybrid/Electric</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-6 col-sm-3 margin-bottom-4 text-center">
+      <div class="text-gray-darker text-bold text-link" href="/cars-for-sale/Commercial/subject??vehicleStyleCodes=COMMERCIAL"
+        title="Commercial" data-birf-log="component" data-birf-cmp="sty" data-birf-extra="{&quot;veh_sty&quot;:&quot;COMMERCIAL&quot;}">
+        <div data-cmp="itemCard" class="item-card row display-flex align-items-stretch flex-column">
+          <div class="col-xs-12 item-card-side"><img class="img-responsive margin-horizontal-auto" src="https://content.autotrader.com/content/dam/autotrader/homepage/styles/DefaultDesk_Style_COMMERCIAL.png"
+              width="224px" height="120px"></div>
+          <div class="col-xs-12 item-card-content display-flex flex-column justify-content-between">
+            <div class="item-card-body margin-bottom-auto">Commercial</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -431,87 +547,3 @@
 <!-- ************************************************************************Segmant separator *******************************************************************************-->
 <div class="row segmant-separator"> </div>
 <!-- ************************************************************************Segmant separator *******************************************************************************-->
-
-<div class="footerLinks container-fluid">
-  <div class="row">
-
-    <div class="col-xs-12 col-md-3 col-20pc">
-      <h3>SHOPPING TOOLS</h3>
-      <ul class="listaFooter">
-        <li><a href="#app-bmo" title="Build &amp; Price" data-interaction_type="cta" data-link_tracking="global-footer:shopping-tools:build-and-price">Build
-            &amp; Price</a></li>
-
-        <li><a href="#app-sni" title="Search New Inventory" data-interaction_type="cta" data-link_tracking="global-footer:shopping-tools:search-inventory">Search
-            New Inventory</a></li>
-
-        <li><a href="#app-fad" title="Find a dealer" data-interaction_type="cta" data-link_tracking="global-footer:shopping-tools:find-a-dealer">Find
-            a dealer</a></li>
-
-        <li><a href="/car-shopping/current-offers" title="Alfa Romeo Current Offers and Deals" data-interaction_type="cta"
-            data-link_tracking="global-footer:shopping-tools:">Alfa Romeo Current Offers and Deals</a></li>
-
-        <li><a href="#app-brochure" title="Get a brochure" data-interaction_type="cta" data-link_tracking="global-footer:shopping-tools:get-brochure">Get
-            a brochure</a></li>
-
-      </ul>
-
-    </div>
-
-    <div class="col-xs-12 col-md-3 col-20pc">
-      <h3>OUR LEGACY</h3>
-      <ul class="listaFooter">
-        <li><a href="/a-story-that-made-history" title="A story that made history" data-interaction_type="nav"
-            data-link_tracking="global-footer:our-legacy:a-story-that-made-history">A story that made history</a></li>
-
-        <li><a href="/the-badge" title="The Badge" data-interaction_type="nav" data-link_tracking="global-footer:our-legacy:the-badge">The
-            Badge</a></li>
-
-        <li><a href="https://www.museoalfaromeo.com/en-us" target="_blank" title="Alfa Romeo Museum"
-            data-interaction_type="nav" data-link_tracking="global-footer:our-legacy:alfa-romeo-museum">Alfa Romeo
-            Museum</a></li>
-      </ul>
-
-    </div>
-
-    <div class="col-xs-12 col-md-3 col-20pc">
-      <h3>ALFA ROMEO WORLD</h3>
-      <ul class="listaFooter">
-        <li><a href="/world/news" title="Alfa Romeo News" data-interaction_type="nav" data-link_tracking="global-footer:alfa-romeo-world:alfa-news:news">Alfa
-            Romeo News</a></li>
-
-        <li><a href="/world/video-alfisti-tv" title="Watch the World of Alfa Romeo with Alfisti Films"
-            data-interaction_type="nav" data-link_tracking="global-footer:alfa-romeo-world:alfisti-films">Watch the
-            World of Alfa Romeo with Alfisti Films</a></li>
-      </ul>
-
-    </div>
-
-    <div class="col-xs-12 col-md-3 col-20pc">
-      <h3>OWNERS</h3>
-      <ul class="listaFooter">
-        <li><a href="/owners/owners-service-manual" title="Owner`s Manual, Service Manual" data-interaction_type="nav"
-            data-link_tracking="global-footer:owners:owners-manual-and-users-guide">Owner`s Manual, Service Manual</a></li>
-
-        <li><a href="/owners/warranty" title="Warranty USA, Towing and Roadside Assistance" data-interaction_type="nav"
-            data-link_tracking="global-footer:owners:warranty">Warranty USA, Towing and Roadside Assistance</a></li>
-
-        <li><a href="https://www.mopar.com/en-us/my-vehicle/recalls.html" target="_blank" title="FCA Recalls"
-            data-interaction_type="nav" data-link_tracking="global-footer:owners:fca-recalls" data_popup="true"
-            data_popup_title="You are now leaving alfaromeousa.com" data_popup_message="International language options are available on your new page."
-            data_popup_cancel="CANCEL" data_popup_confirm="CONFIRM">FCA Recalls</a></li>
-
-        <li><a href="/owners/premium-care-limited-warranty" title="Premium Care Limited Warranty" data-interaction_type="nav"
-            data-link_tracking="global-footer:owners:">Premium Care Limited Warranty</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-
-<div class="spazioLoghi container-fluid visible-lg visible-md"></div>
-<div class="footerBottomText container-fluid">
-
-  <p>©2019 FCA US LLC. &nbsp;All Rights Reserved. &nbsp;<br>
-    ALFA ROMEO is a registered trademark of FCA Group Marketing S.p.A., used with permission.</p>
-
-  <!-- </div> -->

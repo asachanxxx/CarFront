@@ -112,16 +112,16 @@ export class Helpers {
 	    $('[data-toggle="popover"]').popover();
 
 	    // Activate slimscroll
-	    $('.scroller').each(function(){
-	        $(this).slimScroll({
-	            height: $(this).attr('data-height') || '100%',
-	            color: $(this).attr('data-color') || '#71808f',
-	            railOpacity: '0.9',
-	            size: '4px',
-	        });
-	    });
+	    // $('.scroller').each(function(){
+	    //     $(this).slimScroll({
+	    //         height: $(this).attr('data-height') || '100%',
+	    //         color: $(this).attr('data-color') || '#71808f',
+	    //         railOpacity: '0.9',
+	    //         size: '4px',
+	    //     });
+	    // });
 
-	    $('.slimScrollBar').hide();
+	    // $('.slimScrollBar').hide();
 
 	    
 	    // Pre Copy to clipboard

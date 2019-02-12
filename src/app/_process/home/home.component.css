@@ -6,118 +6,160 @@
 /* https://www.bootdey.com/snippets/view/bs4-beta-media-user-list */
 /* https://www.bootdey.com/snippets/view/Real-State-Property-List */
 
+/* 
+https://bootsnipp.com/snippets/40pMm .
+https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&file=multiple-item-product-carousel
+https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&file=testimonial-carousel-with-star-ratings
 
+
+*/
+
+/*******************Footer Styles *****************************************/
+
+
+
+/*******************End of Footer Styles *****************************************/
 #ads {
   margin: 30px 0 30px 0;
- 
+
 }
 
 #ads .card-notify-badge {
-      position: absolute;
-      left: -10px;
-      top: -20px;
-      background: #f2d900;
-      text-align: center;
-      border-radius: 30px 30px 30px 30px; 
-      color: #000;
-      padding: 5px 10px;
-      font-size: 14px;
+  position: absolute;
+  left: -10px;
+  top: 0;
+  background: #f2d900;
+  text-align: center;
+  border-radius: 30px 30px 30px 30px;
+  color: #000;
+  padding: 2px 10px;
+  font-size: 12px;
 
-  }
+}
 
 #ads .card-notify-year {
-      position: absolute;
-      right: -10px;
-      top: -20px;
-      background: #ff4444;
-      border-radius: 50%;
-      text-align: center;
-      color: #fff;      
-      font-size: 14px;      
-      width: 50px;
-      height: 50px;    
-      padding: 15px 0 0 0;
+  position: absolute;
+  right: -11px;
+  top: -9px;
+  background: #ff4444;
+  border-radius: 55%;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  width: 56px;
+  height: 52px;
+  padding: 15px 0 0 0;
 }
 
 
-#ads .card-detail-badge {      
-      background: #f2d900;
-      text-align: center;
-      border-radius: 30px 30px 30px 30px;
-      color: #000;
-      padding: 5px 10px;
-      font-size: 14px;        
-  }
+#ads .card-detail-badge {
+  background: #f2d900;
+  text-align: center;
+  border-radius: 30px 30px 30px 30px;
+  color: #000;
+  padding: 5px 10px;
+  font-size: 9px;
+}
 
- 
+
 
 #ads .card:hover {
-          background: #fff;
-          box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
-          border-radius: 4px;
-          transition: all 0.3s ease;
-      }
+  background: #fff;
+  box-shadow: 12px 15px 20px 0px rgba(46, 61, 73, 0.15);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
 
 #ads .card-image-overlay {
-      font-size: 20px;
-      
-  }
+  font-size: 20px;
+
+}
 
 
 #ads .card-image-overlay span {
-          display: inline-block;              
-      }
+  display: inline-block;
+}
 
 
 #ads .ad-btn {
-      text-transform: uppercase;
-      width: 150px;
-      height: 40px;
-      border-radius: 80px;
-      font-size: 16px;
-      line-height: 35px;
-      text-align: center;
-      border: 3px solid #e6de08;
-      display: block;
-      text-decoration: none;
-      margin: 20px auto 1px auto;
-      color: #000;
-      overflow: hidden;        
-      position: relative;
-      background-color: #e6de08;
-  }
+  text-transform: uppercase;
+  width: 150px;
+  height: 40px;
+  border-radius: 80px;
+  font-size: 16px;
+  line-height: 35px;
+  text-align: center;
+  border: 3px solid #e6de08;
+  display: block;
+  text-decoration: none;
+  margin: 20px auto 1px auto;
+  color: #000;
+  overflow: hidden;
+  position: relative;
+  background-color: #e6de08;
+}
 
 #ads .ad-btn:hover {
-          background-color: #e6de08;
-          color: #1e1717;
-          border: 2px solid #e6de08;
-          background: transparent;
-          transition: all 0.3s ease;
-          box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
-      }
+  background-color: #e6de08;
+  color: #1e1717;
+  border: 2px solid #e6de08;
+  background: transparent;
+  transition: all 0.3s ease;
+  box-shadow: 12px 15px 20px 0px rgba(46, 61, 73, 0.15);
+}
 
 #ads .ad-title h5 {
-      text-transform: uppercase;
-      font-size: 18px;
-  }
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: bold;
+}
 
 
 /*******************ENDection *****************************************/
+.success{
+  border: none;
+}
+
+.danger{
+  border: 1px solid #ffc107;
+  transition: outline 0.6s linear;
+  margin: 0.5em; /* Increased margin since the outline expands outside the element */
+}
 
 
-.border-red{
+
+
+
+
+
+
+
+
+
+
+.btn-yellow {
+  color: #FFEB3B;
+  background-color: #c5161d;
+  border-color: #FFEB3B;
+}
+
+.color-yellow {
+  color: #FFEB3B;
+}
+
+.border-red {
   border: 1px solid #c5161d;
 }
 
-.background-red{
-  background-color:   #c5161d;
+.background-red {
+  background-color: #c5161d;
 }
 
-.for-color-white{
+.for-color-white {
   color: #fff;
 }
 
-.button-padding{
+.button-padding {
 
   padding-top: 5px;
   padding-bottom: 5px;
@@ -129,8 +171,8 @@
   border-radius: 6px;
 }
 
-.blue{
-background-color: #012243;
+.blue {
+  background-color: #012243;
 }
 
 .newCarsMain .Column .header h3 {
@@ -139,7 +181,7 @@ background-color: #012243;
   font-size: 24px;
 }
 
-.segmant-separator{
+.segmant-separator {
 
   background-color: #3e3e3e;
   min-height: 20px;
@@ -151,7 +193,7 @@ background-color: #012243;
   letter-spacing: 2px;
   text-transform: uppercase;
   margin: 0;
-      margin-top: 0px;
+  margin-top: 0px;
   font-size: 16px;
   margin-top: 20px;
 }
@@ -161,7 +203,8 @@ ul.listaFooter {
   padding: 15px 0;
 }
 
-ol, ul {
+ol,
+ul {
   list-style-position: outside;
   list-style-type: none;
 }
@@ -183,6 +226,7 @@ ul.listaFooter li a {
   transition: color, 0.3s;
   color: #666666;
 }
+
 ul.listaFooter li a {
   display: block;
   font-size: 11px;
@@ -191,7 +235,12 @@ ul.listaFooter li a {
   font-family: 'robotoregular';
   letter-spacing: 2px;
 }
-a, a:link, a:visited, a:hover, a:active {
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
   text-decoration: none;
   color: #000;
 }
@@ -206,7 +255,7 @@ a, a:link, a:visited, a:hover, a:active {
   letter-spacing: 2px;
   text-transform: uppercase;
   margin: 0;
-      margin-top: 0px;
+  margin-top: 0px;
   font-size: 16px;
   margin-top: 20px;
 }
@@ -227,7 +276,9 @@ ul.listaFooter {
   margin-bottom: 15px;
   text-align: center;
 }
-.gcss-typography-font-size-default, p {
+
+.gcss-typography-font-size-default,
+p {
   font-size: 1rem;
   line-height: 1.42857;
 }

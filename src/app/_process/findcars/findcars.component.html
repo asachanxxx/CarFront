@@ -1,0 +1,165 @@
+<div class="row">
+  <div class="col-md-12 text-md-left d-inline-block">
+    <h1 class="text-search-header">product listing </h1>
+  </div>
+</div>
+
+<section class="product-listing page-section-ptb">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-4">
+        <div class="listing-sidebar">
+          <div class="widget">
+            <div class="widget-search">
+              <h5>Advanced Search</h5>
+              <ul class="list-style-none">
+                <li><i class="fa fa-star"> </i> Results Found <span class="float-right">(39)</span></li>
+                <li><i class="fa fa-shopping-cart"> </i> Compare Vehicles <span class="float-right">(10)</span></li>
+              </ul>
+
+            </div>
+            <div class="clearfix">
+
+            </div>
+            <ngb-accordion #acc="ngbAccordion">
+              <ngb-panel>
+                <ng-template ngbPanelTitle>
+                  <span>Sarch By <b> Make</b> </span>
+                </ng-template>
+                <ng-template ngbPanelContent>
+                  <ng-select [(ngModel)]="SelectPageSize">
+                    <ng-option *ngFor="let car of SelectPageSizeItems" [value]="car.id" [disabled]="car.disabled">{{car.Text}}</ng-option>
+                  </ng-select>
+
+
+                </ng-template>
+              </ngb-panel>
+
+              <ngb-panel>
+                <ng-template ngbPanelTitle>
+                  <span>Sarch By <b> Model</b> </span>
+                </ng-template>
+                <ng-template ngbPanelContent>
+                  <ng5-slider [(value)]="value" [options]="options"></ng5-slider>
+                </ng-template>
+              </ngb-panel>
+
+              <ngb-panel>
+                <ng-template ngbPanelTitle>
+                  <span>Sarch By <b> Year</b> </span>
+                </ng-template>
+                <ng-template ngbPanelContent>
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                  wolf moon officia
+                  aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3
+                  wolf moon tempor,
+                  sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim
+                  keffiyeh helvetica,
+                  craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice
+                  lomo. Leggings
+                  occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of
+                  them accusamus
+                  labore sustainable VHS.
+                </ng-template>
+              </ngb-panel>
+
+            </ngb-accordion>
+
+
+          </div>
+          <div class="widget-banner">
+            <img class="img-fluid center-block" src="images/banner.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-9 col-md-8">
+        <div class="sorting-options-main">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="price-slide">
+                <div class="price">
+                  <label for="amount" class="text-uppercase">Price Range From(LKR)(Laks)</label>
+
+                  <ng5-slider [(value)]="valueFrom" [options]="optionsFrom"></ng5-slider>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="price-slide-2">
+                <div class="price">
+                  <label for="amount-2" class="text-uppercase">To(LKR)(Laks)</label>
+                  <ng5-slider [(value)]="valueTo" [options]="optionsTo"></ng5-slider>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="price-search">
+                <span>Price search</span>
+                <div class="search">
+                  <i class="fa fa-search"></i>
+                  <input type="search" class="form-control placeholder" placeholder="Search....">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row sorting-options">
+            <div class="col-md-5">
+              <div class="change-view-button">
+                <a href="listing-01.html"> <i class="fa fa-th"></i> </a>
+                <a class="active" href="#"> <i class="fa fa-list-ul"></i> </a>
+              </div>
+            </div>
+            <div class="col-md-3 text-right">
+              <div class="selected-box">
+                <ng-select [(ngModel)]="SelectPageSize">
+                  <ng-option *ngFor="let car of SelectPageSizeItems" [value]="car.id" [disabled]="car.disabled">{{car.Text}}</ng-option>
+                </ng-select>
+              </div>
+            </div>
+            <div class="col-md-4 text-right">
+              <div class="selected-box">
+                <ng-select [(ngModel)]="SelectPageSort">
+                  <ng-option *ngFor="let car of SelectPageSortItems" [value]="car.id" [disabled]="car.disabled">{{car.Text}}</ng-option>
+                </ng-select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- <ng-container *ngIf="_ItemsList != null; then show; else hide " >
+       
+
+        </ng-container>
+
+        <ng-template #then>
+          <div>
+            <app-centrallist [ItemsList]=_ItemsList></app-centrallist>
+          </div>
+        </ng-template>
+
+        <ng-template #hide>
+          <div>
+            <h5>Oooops! sorry... haven't found anything </h5>
+          </div>
+        </ng-template> -->
+
+
+        <ng-template [ngIf]="_ItemsList" [ngIfElse]="loggedOut">
+            <app-centrallist [ItemsList]=_ItemsList></app-centrallist>
+        </ng-template>
+        
+        <ng-template #loggedOut>
+          <h5>Oooops! sorry... haven't found anything </h5>
+          <p> {{10029939 | thousondseparator}} </p>
+        </ng-template>
+        
+
+
+        <div class="pagination-nav d-flex justify-content-center">
+          <ngb-pagination [collectionSize]="70" [(page)]="page" [boundaryLinks]="true"></ngb-pagination>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
