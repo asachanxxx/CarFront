@@ -354,3 +354,13 @@ a, button, input {
 .help-block {
     color: #000000;
 }
+
+.img-thumbnail{
+	color: #db2d2e;
+}
+
+.img-thumbnail img {
+
+	padding: 5px;
+	width: 100px;
+  }
