@@ -919,32 +919,18 @@
       </div>
     </div>
 
+
+    <!-- ***************************************************************************Image Upload and Display************************************************************* -->
+
     <div class="row">
       <div class="col-md-6">
         <div class="slider-slick">
           <div class="slider slider-for detail-big-car-gallery slick-initialized slick-slider"><button type="button"
               data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="">Previous</button>
             <div aria-live="polite" class="slick-list draggable">
-              <div class="slick-track" role="listbox" style="opacity: 1; width: 5550px; transform: translate3d(-555px, 0px, 0px);"><img
-                  class="img-fluid slick-slide slick-cloned" src="assets/img/cars/addnewcars/01.jpg" alt=""
-                  data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 555px;"><img class="img-fluid slick-slide slick-current slick-active"
-                  src="assets/img/cars/addnewcars/01.jpg" alt="" data-slick-index="0" aria-hidden="false" tabindex="-1"
-                  role="option" aria-describedby="slick-slide00" style="width: 555px;"><img class="img-fluid slick-slide"
-                  src="assets/img/cars/addnewcars/01.jpg" alt="" data-slick-index="1" aria-hidden="true" tabindex="-1"
-                  role="option" aria-describedby="slick-slide01" style="width: 555px;"><img class="img-fluid slick-slide"
-                  src="images/detail/big/03.jpg" alt="" data-slick-index="2" aria-hidden="true" tabindex="-1" role="option"
-                  aria-describedby="slick-slide02" style="width: 555px;"><img class="img-fluid slick-slide" src="images/detail/big/04.jpg"
-                  alt="" data-slick-index="3" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide03"
-                  style="width: 555px;"><img class="img-fluid slick-slide" src="images/detail/big/05.jpg" alt=""
-                  data-slick-index="4" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide04"
-                  style="width: 555px;"><img class="img-fluid slick-slide" src="images/detail/big/06.jpg" alt=""
-                  data-slick-index="5" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide05"
-                  style="width: 555px;"><img class="img-fluid slick-slide" src="images/detail/big/07.jpg" alt=""
-                  data-slick-index="6" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide06"
-                  style="width: 555px;"><img class="img-fluid slick-slide" src="images/detail/big/08.jpg" alt=""
-                  data-slick-index="7" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide07"
-                  style="width: 555px;"><img class="img-fluid slick-slide slick-cloned" src="images/detail/big/01.jpg"
-                  alt="" data-slick-index="8" aria-hidden="true" tabindex="-1" style="width: 555px;"></div>
+              <div class="slick-track" role="listbox" style="opacity: 1; width: 5550px; transform: translate3d(-555px, 0px, 0px);">
+                <img class="img-fluid slick-slide slick-cloned" src="assets/img/cars/addnewcars/01.jpg" alt=""
+                  data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 555px;"></div>
             </div>
 
 
@@ -957,180 +943,76 @@
           </div>
         </div>
       </div>
+
+      <!-- ***************************************************************************FOrm Upload Area************************************************************* -->
       <div class="col-md-6">
         <div class="car-details-sidebar">
           <div class="details-block details-weight">
             <div class="row">
 
 
-
-              <div class="ibox">
-                <div class="ibox-head">
-                  <div class="ibox-title">Select 2
-                    <a class="btn btn-sm btn-primary ml-2" href="https://select2.github.io/" target="_blank">Official
-                      site</a>
+              <div class="col-md-12">
+                <div class="ibox">
+                  <div class="ibox-head">
+                    <div class="ibox-title">Select 2
+                      <a class="btn btn-sm btn-primary ml-2" href="https://select2.github.io/" target="_blank">Official
+                        site</a>
+                    </div>
                   </div>
-                </div>
-                <div class="ibox-body">
-                  <div class="form-group">
-                        <p>dasasdas</p>
-                        
-                    <ng-select class="form-control select2_demo_1 select2-hidden-accessible" [items]="_allMakess" #select_make (change)="ChangeEventMake(select_make)" bindLabel="Text"
-                      autofocus bindValue="id">
-                    </ng-select>
+                  <div class="ibox-body">
+
+                    <div class="form-group">
+                      <label class="form-control-label  color-yellow to-uppercase">Make</label>
+                      <ng-select [items]="_allMakess" class=" select2_demo_1" #select_model (change)="ChangeEventModel(select_model)"
+                        name="selectedMode" bindLabel="Text" autofocus bindValue="id">
+                      </ng-select>
+
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-control-label">Multiple select</label>
+                      <ng-select [items]="_allModels" #select_model (change)="ChangeEventModel(select_model)" name="selectedMode"
+                        bindLabel="Text" autofocus bindValue="id">
+                      </ng-select>
+
+                    </div>
 
 
-                    <!-- <label class="form-control-label">Single select</label>
-                    <select class="form-control select2_demo_1 select2-hidden-accessible" tabindex="-1" aria-hidden="true">
-                      <optgroup label="Alaskan/Hawaiian Time Zone">
-                        <option value="AK">Alaska</option>
-                        <option value="HI">Hawaii</option>
-                      </optgroup>
-                      <optgroup label="Pacific Time Zone">
-                        <option value="CA">California</option>
-                        <option value="NV">Nevada</option>
-                        <option value="OR">Oregon</option>
-                        <option value="WA">Washington</option>
-                      </optgroup>
-                      <optgroup label="Mountain Time Zone">
-                        <option value="AZ">Arizona</option>
-                        <option value="CO">Colorado</option>
-                        <option value="ID">Idaho</option>
-                        <option value="MT">Montana</option>
-                        <option value="NE">Nebraska</option>
-                        <option value="NM">New Mexico</option>
-                        <option value="ND">North Dakota</option>
-                        <option value="UT">Utah</option>
-                        <option value="WY">Wyoming</option>
-                      </optgroup>
-                      <optgroup label="Central Time Zone">
-                        <option value="AL">Alabama</option>
-                        <option value="AR">Arkansas</option>
-                        <option value="IL">Illinois</option>
-                        <option value="IA">Iowa</option>
-                        <option value="KS">Kansas</option>
-                        <option value="KY">Kentucky</option>
-                        <option value="LA">Louisiana</option>
-                        <option value="MN">Minnesota</option>
-                        <option value="MS">Mississippi</option>
-                        <option value="MO">Missouri</option>
-                        <option value="OK">Oklahoma</option>
-                        <option value="SD">South Dakota</option>
-                        <option value="TX">Texas</option>
-                        <option value="TN">Tennessee</option>
-                        <option value="WI">Wisconsin</option>
-                      </optgroup>
-                      <optgroup label="Eastern Time Zone">
-                        <option value="CT">Connecticut</option>
-                        <option value="DE">Delaware</option>
-                        <option value="FL">Florida</option>
-                        <option value="GA">Georgia</option>
-                        <option value="IN">Indiana</option>
-                        <option value="ME">Maine</option>
-                        <option value="MD">Maryland</option>
-                        <option value="MA">Massachusetts</option>
-                        <option value="MI">Michigan</option>
-                        <option value="NH">New Hampshire</option>
-                        <option value="NJ">New Jersey</option>
-                        <option value="NY">New York</option>
-                        <option value="NC">North Carolina</option>
-                        <option value="OH">Ohio</option>
-                        <option value="PA">Pennsylvania</option>
-                        <option value="RI">Rhode Island</option>
-                        <option value="SC">South Carolina</option>
-                        <option value="VT">Vermont</option>
-                        <option value="VA">Virginia</option>
-                        <option value="WV">West Virginia</option>
-                      </optgroup>
-                    </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 756.5px;"><span
-                        class="selection"><span class="select2-selection select2-selection--single" role="combobox"
-                          aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-hpkp-container"><span
-                            class="select2-selection__rendered" id="select2-hpkp-container" title="Alaska">Alaska</span><span
-                            class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span
-                        class="dropdown-wrapper" aria-hidden="true"></span></span> -->
+                    <div class="form-group">
+                      <label class="form-control-label">Multiple select</label>
+                      <ng-select [items]="_allYearMakes" #select_year (change)="ChangeEventYear(select_year)" name="selectedYear"
+                        bindLabel="Text" autofocus bindValue="id">
+                      </ng-select>
+
+                    </div>
 
 
-                  </div>
-                  <div class="form-group">
-                    <label class="form-control-label">Multiple select</label>
-                    <select class="form-control select2_demo_1 select2-hidden-accessible" multiple="" tabindex="-1"
-                      aria-hidden="true">
-                      <optgroup label="Alaskan/Hawaiian Time Zone">
-                        <option value="AK">Alaska</option>
-                        <option value="HI">Hawaii</option>
-                      </optgroup>
-                      <optgroup label="Pacific Time Zone">
-                        <option value="CA">California</option>
-                        <option value="NV">Nevada</option>
-                        <option value="OR">Oregon</option>
-                        <option value="WA">Washington</option>
-                      </optgroup>
-                      <optgroup label="Mountain Time Zone">
-                        <option value="AZ">Arizona</option>
-                        <option value="CO">Colorado</option>
-                        <option value="ID">Idaho</option>
-                        <option value="MT">Montana</option>
-                        <option value="NE">Nebraska</option>
-                        <option value="NM">New Mexico</option>
-                        <option value="ND">North Dakota</option>
-                        <option value="UT">Utah</option>
-                        <option value="WY">Wyoming</option>
-                      </optgroup>
-                    </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 756.5px;"><span
-                        class="selection"><span class="select2-selection select2-selection--multiple" role="combobox"
-                          aria-haspopup="true" aria-expanded="false" tabindex="-1">
-                          <ul class="select2-selection__rendered">
-                            <li class="select2-search select2-search--inline"><input class="select2-search__field" type="search"
-                                tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"
-                                role="textbox" aria-autocomplete="list" placeholder="" style="width: 0.75em;"></li>
-                          </ul>
-                        </span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                  </div>
-                  <div class="form-group">
-                    <label class="form-control-label">With Placeholder &amp; allow clear</label>
-                    <select class="form-control select2_demo_2 select2-hidden-accessible" tabindex="-1" aria-hidden="true">
-                      <optgroup label="Alaskan/Hawaiian Time Zone">
-                        <option value="AK">Alaska</option>
-                        <option value="HI">Hawaii</option>
-                      </optgroup>
-                      <optgroup label="Pacific Time Zone">
-                        <option value="CA">California</option>
-                        <option value="NV">Nevada</option>
-                        <option value="OR">Oregon</option>
-                        <option value="WA">Washington</option>
-                      </optgroup>
-                      <optgroup label="Mountain Time Zone">
-                        <option value="AZ">Arizona</option>
-                        <option value="CO">Colorado</option>
-                        <option value="ID">Idaho</option>
-                        <option value="MT">Montana</option>
-                        <option value="NE">Nebraska</option>
-                        <option value="NM">New Mexico</option>
-                        <option value="ND">North Dakota</option>
-                        <option value="UT">Utah</option>
-                        <option value="WY">Wyoming</option>
-                      </optgroup>
-                    </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 756.5px;"><span
-                        class="selection"><span class="select2-selection select2-selection--single" role="combobox"
-                          aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-qi1s-container"><span
-                            class="select2-selection__rendered" id="select2-qi1s-container" title="Alaska"><span class="select2-selection__clear">×</span>Alaska</span><span
-                            class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span
-                        class="dropdown-wrapper" aria-hidden="true"></span></span>
+                    <div class="form-group">
+                      <label class="form-control-label">Multiple select</label>
+
+                    </div>
+
                   </div>
                 </div>
               </div>
 
 
-
             </div>
-
           </div>
         </div>
       </div>
+      <!-- ***************************************************************************END OF  FOrm Upload Area************************************************************* -->
+
+
     </div>
 
+    <!-- ***************************************************************************Image Upload and Display************************************************************* -->
+
+
+    <!-- ***************************************************************************Form Input Area ************************************************************* -->
+
     <div class="row">
-      <div class="col-lg-9 col-md-9  col-sm-9">
+      <div class="col-lg-12 col-md-12  col-sm-12">
 
 
         <div class="ibox">
@@ -1138,68 +1020,193 @@
             <div class="ibox-head">
               <div class="ibox-title">Multi Column form</div>
             </div>
+
             <div class="ibox-body">
+              <!-- ***************************************************************************First COlumn ************************************************************* -->
               <div class="row">
+
+
+
                 <div class="col-md-6">
+
                   <div class="form-group mb-4">
-                    <label>Full Name</label>
-                    <input class="form-control" type="text" placeholder="Enter Full Name">
-                  </div>
-                  <div class="form-group mb-4">
-                    <label>Email</label>
-                    <input class="form-control" type="text" placeholder="Enter Email">
-                  </div>
-                  <div class="form-group mb-4">
-                    <label>Date of Birth</label>
-                    <input class="form-control" type="text" placeholder="Enter Date of Birth">
-                    <span class="help-block">Please Enter your date of birth.</span>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group mb-4">
-                    <label>Location</label>
-                    <div class="input-group-icon input-group-icon-left">
-                      <span class="input-icon input-icon-left"><i class="ti-location-pin font-16"></i></span>
-                      <input class="form-control" type="text" placeholder="Enter Location">
-                    </div>
-                  </div>
-                  <div class="form-group mb-4">
-                    <label>Password</label>
-                    <div class="input-group-icon input-group-icon-left">
-                      <span class="input-icon input-icon-left"><i class="ti-lock"></i></span>
-                      <input class="form-control" type="password" placeholder="Enter Password">
-                    </div>
-                  </div>
-                  <div class="form-group mb-4">
-                    <label>Phone number</label>
+                    <label class="lable-separation">Phone number</label>
                     <div class="input-group">
-                      <div class="input-group-btn">
-                        <button class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">+61<i class="fa fa-angle-down ml-1"></i></button>
+                      <div class="input-group-btn ">
+                        <button class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">+94<i class="fa fa-angle-down ml-1"></i></button>
                         <div class="dropdown-menu">
-                          <a class="dropdown-item" href="javascript:;">+61</a>
-                          <a class="dropdown-item" href="javascript:;">+1</a>
-                          <a class="dropdown-item" href="javascript:;">+7</a>
+                          <a class="dropdown-item" href="javascript:;">+94</a>
                         </div>
                       </div>
                       <input class="form-control" type="text" placeholder="Enter Phone">
                     </div>
                     <span class="help-block">It will be required to verify your account.</span>
                   </div>
+
+                  <div class="form-group mb-0">
+                    <div class="mt-1">
+                      <label class="radio radio-inline radio-grey radio-primary">
+                        <input type="radio" name="d" checked="">
+                        <span class="input-span"></span>New User</label>
+                      <label class="radio radio-inline radio-grey radio-primary">
+                        <input type="radio" name="d">
+                        <span class="input-span"></span>Existing User</label>
+                    </div>
+
+                  </div>
+
+
+                  <div class="form-group mb-4">
+                    <label class="lable-separation">CODE OF THE CAR</label>
+                    <div class="input-group-icon input-group-icon-left">
+                      <span class="input-icon input-icon-left"><i class="ti-location-pin font-16"></i></span>
+                      <input class="form-control" type="text" placeholder="Code of the car">
+                    </div>
+                    <span class="help-block">This code will be auto genarated.</span>
+                  </div>
+                  <div class="form-group mb-4">
+                    <label class="lable-separation">NAME TO DISPLAY</label>
+                    <div class="input-group-icon input-group-icon-left">
+                      <span class="input-icon input-icon-left"><i class="ti-location-pin font-16"></i></span>
+                      <input class="form-control" type="text" placeholder="Car's Name">
+                    </div>
+                  </div>
+
+                  <div class="form-group mb-4">
+                    <label class="form-control-label  lable-separation to-uppercase">Make</label>
+                    <ng-select [items]="_allMakess" class=" select2_demo_1" #select_model (change)="ChangeEventModel(select_model)"
+                      name="selectedMode" bindLabel="Text" autofocus bindValue="id">
+                    </ng-select>
+                  </div>
+                  <div class="form-group mb-4">
+                    <label class="form-control-label  lable-separation to-uppercase">MODEL</label>
+                    <ng-select [items]="_allModels" #select_model (change)="ChangeEventModel(select_model)" name="selectedMode"
+                      bindLabel="Text" autofocus bindValue="id">
+                    </ng-select>
+
+                  </div>
+                  <div class="form-group mb-4">
+                    <label class="form-control-label  lable-separation to-uppercase">YEAR</label>
+                    <ng-select [items]="_allYearMakes" #select_year (change)="ChangeEventYear(select_year)" name="selectedYear"
+                      bindLabel="Text" autofocus bindValue="id">
+                    </ng-select>
+                  </div>
+
+                  <div class="form-group mb-4">
+                    <label class="form-control-label  lable-separation to-uppercase">MILAGE</label>
+                    <ng-select [items]="_allBodytypes" #select_year (change)="ChangeEventYear(select_year)" name="selectedYear"
+                      bindLabel="Text" autofocus bindValue="id">
+                    </ng-select>
+                  </div>
+
+                  <div class="form-group mb-4">
+                    <label class="form-control-label  lable-separation to-uppercase">BODY TYPE</label>
+                    <ng-select [items]="_allBodytypes" #select_year (change)="ChangeEventYear(select_year)" name="selectedYear"
+                      bindLabel="Text" autofocus bindValue="id">
+                    </ng-select>
+                  </div>
+
+                  <div class="form-group mb-0">
+                    <label class="form-control-label  lable-separation to-uppercase">OPTIONS</label>
+                    <div class="mt-1">
+                      <label class="radio radio-inline radio-grey radio-primary">
+                        <input type="radio" name="d" checked="">
+                        <span class="input-span"></span>Option 1</label>
+                      <label class="radio radio-inline radio-grey radio-primary">
+                        <input type="radio" name="d">
+                        <span class="input-span"></span>Option 1</label>
+                    </div>
+
+                  </div>
+
+
                 </div>
-              </div>
-              <div class="form-group mb-0">
-                <label>Account Type</label>
-                <div class="mt-1">
-                  <label class="radio radio-inline radio-grey radio-primary">
-                    <input type="radio" name="d" checked="">
-                    <span class="input-span"></span>Personal</label>
-                  <label class="radio radio-inline radio-grey radio-primary">
-                    <input type="radio" name="d">
-                    <span class="input-span"></span>Corporate</label>
+
+
+                <!-- ***************************************************************************Second Column ************************************************************* -->
+
+                <div class="col-md-6">
+
+                  <div class="form-group mb-4">
+                    <label class="form-control-label  lable-separation to-uppercase">YOUR ASKING PRICE (LKR)</label>
+                    <div class="input-group-icon input-group-icon-left">
+                      <span class="input-icon input-icon-left"><i class="ti-location-pin font-16"></i></span>
+                      <input class="form-control" type="number" placeholder="0.00">
+                    </div>
+                  </div>
+                  <div class="form-group mb-4">
+                    <label class="form-control-label  lable-separation to-uppercase">EXPECTED SELLING PRICE (LKR)</label>
+                    <div class="input-group-icon input-group-icon-left">
+                      <span class="input-icon input-icon-left"><i class="ti-location-pin font-16"></i></span>
+                      <input class="form-control" type="number" placeholder="0.00">
+                    </div>
+                  </div>
+                  <div class="form-group mb-4">
+                    <label class="form-control-label  lable-separation to-uppercase">AUCTION PRICE(LKR)</label>
+                    <div class="input-group-icon input-group-icon-left">
+                      <span class="input-icon input-icon-left"><i class="ti-location-pin font-16"></i></span>
+                      <input class="form-control" type="number" placeholder="0.00">
+                    </div>
+                    <span class="help-block">If you decided to put the car to auction only this price will used.</span>
+                  </div>
+
+                  <div class="form-group mb-4">
+                    <label class="form-control-label  lable-separation to-uppercase">engine capacity(CC)</label>
+                    <div class="input-group-icon input-group-icon-left">
+                      <span class="input-icon input-icon-left"><i class="ti-location-pin font-16"></i></span>
+                      <input class="form-control" type="number" placeholder="0.00">
+                    </div>
+                  </div>
+
+                  <div class="form-group mb-4">
+                    <label class="form-control-label  lable-separation to-uppercase">Door Count(CC)</label>
+                    <div class="input-group-icon input-group-icon-left">
+                      <span class="input-icon input-icon-left"><i class="ti-location-pin font-16"></i></span>
+                      <input class="form-control" type="number" placeholder="0.00">
+                    </div>
+                  </div>
+
+                  <div class="form-group mb-0">
+                    <label class="form-control-label  lable-separation to-uppercase">Transmission type</label>
+                    <div class="mt-1">
+                      <label class="radio radio-inline radio-grey radio-primary">
+                        <input type="radio" name="d" checked="">
+                        <span class="input-span"></span>Manual</label>
+                      <label class="radio radio-inline radio-grey radio-primary">
+                        <input type="radio" name="d">
+                        <span class="input-span"></span>Auto</label>
+                    </div>
+                  </div>
+
+                  <div class="form-group mb-0">
+                    <label class="form-control-label  lable-separation to-uppercase">Fuel type</label>
+                    <div class="mt-1">
+                      <label class="radio radio-inline radio-grey radio-primary">
+                        <input type="radio" name="d" checked="">
+                        <span class="input-span"></span>petrol </label>
+                      <label class="radio radio-inline radio-grey radio-primary">
+                        <input type="radio" name="d">
+                        <span class="input-span"></span>diesel </label>
+                    </div>
+                  </div>
+
+
+                  <br>
+                  <div class="form-group mb-0">
+                      <label class="form-control-label  lable-separation to-uppercase">Put your car to auction</label>
+                      <div class="mt-1">
+                        <label class="radio radio-inline radio-grey radio-primary">
+                          <input type="checkbox" name="d" checked="">
+                          <span class="input-span"></span>Auction my car now  </label>
+                      </div>
+                    </div>
+
                 </div>
-                <span class="help-block">Select one of 2 types of accounts.</span>
+
               </div>
+
             </div>
+
             <div class="ibox-footer">
               <button class="btn btn-primary mr-2" type="button">Submit</button>
               <button class="btn btn-outline-secondary" type="reset">Cancel</button>
@@ -1245,7 +1252,7 @@
         </div>
       </div>
 
-
+<!-- 
       <div class="col-md-3">
         <div class="car-details-sidebar">
           <div class="details-form contact-2 details-weight">
@@ -1278,7 +1285,7 @@
               allowfullscreen=""></iframe>
           </div>
         </div>
-      </div>
+      </div> -->
 
 
     </div>

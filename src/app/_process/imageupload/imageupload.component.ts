@@ -31,6 +31,7 @@ export class ImageuploadComponent implements OnInit {
     console.log(event)
 
   }
+
   // OnclickSubmit(){
   //     var fd = new FormData();
   //     fd.append("file" , this.fileToUpload, this.fileToUpload.name);
@@ -64,5 +65,7 @@ export class ImageuploadComponent implements OnInit {
       console.log("Error from server " , err)
     }
 }
+
+
 
 }
