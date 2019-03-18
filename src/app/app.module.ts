@@ -6,7 +6,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { LayoutModule } from './/layouts/layout.module';
 import { ScriptLoaderService } from './_services/script-loader.service';
 import { NgSelectModule } from '@ng-select/ng-select';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { GlobalService } from './_services/global.service';
 import { FindcarsComponent } from './_process/findcars/findcars.component';
@@ -19,6 +19,7 @@ import { CentrallistComponent } from './_process/findcars/centrallist/centrallis
 import { PipesModule } from './_pipes/pipes.module';
 import { ImageuploadComponent } from './_process/imageupload/imageupload.component';
 import { AddnewcarComponent } from './_process/addnewcar/addnewcar.component';
+import { CustomerRegisterComponent } from './customer-register/customer-register.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { AddnewcarComponent } from './_process/addnewcar/addnewcar.component';
     CentrallistComponent,
     ImageuploadComponent,
     AddnewcarComponent,
+    CustomerRegisterComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,7 @@ import { AddnewcarComponent } from './_process/addnewcar/addnewcar.component';
     Ng5SliderModule,
     CommonModule,FormsModule,
     NgSelectModule,
-    PipesModule
+    PipesModule,ReactiveFormsModule
     
    
     

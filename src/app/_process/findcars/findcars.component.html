@@ -1,7 +1,8 @@
 <div class="row">
   <div class="col-md-12 p-3 bg-primary text-center text-uppercase text-white">
     <h1 class="text-white">Hey!! find a car fast here</h1>
-    <h5>you can use this to find your dream car.all the cars here are fully inspected and ensure the highst level of qulity </h5>
+    <h5>you can use this to find your dream car.all the cars here are fully inspected and ensure the highst level of
+      qulity </h5>
   </div>
 </div>
 <section class="product-listing page-section-ptb">
@@ -11,60 +12,102 @@
         <div class="listing-sidebar">
           <div class="widget">
             <div class="widget-search">
-              <h5>Advanced Search</h5>
-              <ul class="list-style-none">
+              <h5>Car Search</h5>
+              <ul class="list-style-none pl-0">
                 <li><i class="fa fa-star"> </i> Results Found <span class="float-right">(39)</span></li>
                 <li><i class="fa fa-shopping-cart"> </i> Compare Vehicles <span class="float-right">(10)</span></li>
               </ul>
 
             </div>
             <div class="clearfix">
+            </div>
+            <div class="left-nav">
+              <dl class="filter-box is-category is-active">
+                <dt class="filter-box-title">Select Make</dt>
+                <dd class="filter-box-body">
+
+                  <div class="row scroll-150 mb-2">
+                    <div class="col-md-12 pl-5 ">
+                      <div class="form-group " *ngFor="let item of _MakeItems">
+                        <label class="checkbox checkbox-primary">
+                          <input type="checkbox" [checked]="item.Options" (change)="item.Options = !item.Options">
+                          <span class="input-span"></span>{{item.Text}}</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="ibox-body pl-2">
+                    <button (click)="ApplyMake()" class="btn btn-primary">Apply</button>
+                  </div>
+
+                </dd>
+              </dl>
+
+              <dl class="filter-box is-category is-active">
+                <dt class="filter-box-title">Select Year</dt>
+                <dd class="filter-box-body">
+                  <div class="row scroll-150 mb-2">
+                    <div class="col-md-12 pl-5 ">
+                      <div class="form-group " *ngFor="let item of _allYearMakes">
+                        <label class="checkbox checkbox-primary">
+                          <input type="checkbox" [checked]="item.Options" (change)="item.Options = !item.Options">
+                          <span class="input-span"></span>{{item.Text}}</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ibox-body pl-2">
+                    <button (click)="ApplyYear()" class="btn btn-primary btn-sm">Apply</button>
+                  </div>
+                </dd>
+              </dl>
+
+
+              <dl class="filter-box is-category is-active">
+                <dt class="filter-box-title">Select Milages</dt>
+                <dd class="filter-box-body">
+
+                  <div class="row scroll-150 mb-2">
+                    <div class="col-md-12 pl-5 ">
+                      <div class="form-group " *ngFor="let item of _allYearMilages">
+                        <label class="checkbox checkbox-primary">
+                          <input type="checkbox" [checked]="item.Options" (change)="item.Options = !item.Options">
+                          <span class="input-span"></span>{{item.Text}}</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="ibox-body pl-2">
+                    <button (click)="ApplyMilages()" class="btn btn-primary">Apply</button>
+                  </div>
+
+                </dd>
+              </dl>
+
+
+              <dl class="filter-box is-category is-active">
+                <dt class="filter-box-title">Select BodyType</dt>
+                <dd class="filter-box-body">
+
+                  <div class="row scroll-150 mb-2">
+                    <div class="col-md-12 pl-5 ">
+                      <div class="form-group " *ngFor="let item of _allYearBodyTypes">
+                        <label class="checkbox checkbox-primary">
+                          <input type="checkbox" [checked]="item.Options" (change)="item.Options = !item.Options">
+                          <span class="input-span"></span>{{item.Text}}</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="ibox-body pl-2">
+                    <button (click)="ApplyBodyTypes()" class="btn btn-primary">Apply</button>
+                  </div>
+
+                </dd>
+              </dl>
+
+
 
             </div>
-            <ngb-accordion #acc="ngbAccordion">
-              <ngb-panel>
-                <ng-template ngbPanelTitle>
-                  <span>Sarch By <b> Make</b> </span>
-                </ng-template>
-                <ng-template ngbPanelContent>
-                  <ng-select [(ngModel)]="SelectPageSize">
-                    <ng-option *ngFor="let car of SelectPageSizeItems" [value]="car.id" [disabled]="car.disabled">{{car.Text}}</ng-option>
-                  </ng-select>
-
-
-                </ng-template>
-              </ngb-panel>
-
-              <ngb-panel>
-                <ng-template ngbPanelTitle>
-                  <span>Sarch By <b> Model</b> </span>
-                </ng-template>
-                <ng-template ngbPanelContent>
-                  <ng5-slider [(value)]="value" [options]="options"></ng5-slider>
-                </ng-template>
-              </ngb-panel>
-
-              <ngb-panel>
-                <ng-template ngbPanelTitle>
-                  <span>Sarch By <b> Year</b> </span>
-                </ng-template>
-                <ng-template ngbPanelContent>
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
-                  wolf moon officia
-                  aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3
-                  wolf moon tempor,
-                  sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim
-                  keffiyeh helvetica,
-                  craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice
-                  lomo. Leggings
-                  occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of
-                  them accusamus
-                  labore sustainable VHS.
-                </ng-template>
-              </ngb-panel>
-
-            </ngb-accordion>
-
 
           </div>
           <div class="widget-banner">
@@ -103,26 +146,37 @@
             </div>
           </div>
           <div class="row sorting-options">
-            <div class="col-md-5">
+            <div class="col-md-4">
               <div class="change-view-button">
                 <a href="listing-01.html"> <i class="fa fa-th"></i> </a>
                 <a class="active" href="#"> <i class="fa fa-list-ul"></i> </a>
               </div>
             </div>
-            <div class="col-md-3 text-right">
-              <div class="selected-box">
-                <ng-select [(ngModel)]="SelectPageSize">
-                  <ng-option *ngFor="let car of SelectPageSizeItems" [value]="car.id" [disabled]="car.disabled">{{car.Text}}</ng-option>
-                </ng-select>
-              </div>
-            </div>
             <div class="col-md-4 text-right">
-              <div class="selected-box">
-                <ng-select [(ngModel)]="SelectPageSort">
-                  <ng-option *ngFor="let car of SelectPageSortItems" [value]="car.id" [disabled]="car.disabled">{{car.Text}}</ng-option>
-                </ng-select>
+              <div class="form-group row">
+                <label for="inputPassword" class="col-sm-2 col-form-label pr-1" style="font-weight: bold;"> View:  </label>
+                <div class="col-sm-10">
+                  <ng-select [(ngModel)]="SelectPageSize">
+                    <ng-option *ngFor="let car of SelectPageSizeItems" [value]="car.id" [disabled]="car.disabled">
+                      {{car.Text}}</ng-option>
+                  </ng-select>
+                </div>
               </div>
             </div>
+
+
+            <div class="col-md-4 text-right">
+              <div class="form-group row">
+                <label for="inputPassword" class="col-sm-2 col-form-label pr-1" style="font-weight: bold;" > View: </label>
+                <div class="col-sm-10">
+                  <ng-select [(ngModel)]="SelectPageSort">
+                    <ng-option *ngFor="let car of SelectPageSortItems" [value]="car.id" [disabled]="car.disabled">
+                      {{car.Text}}</ng-option>
+                  </ng-select>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
 
@@ -146,19 +200,18 @@
 
 
         <ng-template [ngIf]="_ItemsList" [ngIfElse]="loggedOut">
-            <app-centrallist [ItemsList]=_ItemsList></app-centrallist>
+          <app-centrallist [ItemsList]=_ItemsList></app-centrallist>
         </ng-template>
-        
+
         <ng-template #loggedOut>
           <h5>Oooops! sorry... haven't found anything </h5>
           <p> {{10029939 | thousondseparator}} </p>
         </ng-template>
-        
 
 
-        <div class="pagination-nav d-flex justify-content-center">
-          <ngb-pagination [collectionSize]="70" [(page)]="page" [boundaryLinks]="true"></ngb-pagination>
-        </div>
+
+
+
       </div>
     </div>
   </div>

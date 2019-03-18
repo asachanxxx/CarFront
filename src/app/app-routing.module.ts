@@ -15,6 +15,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
 import { FindcarsComponent } from './_process/findcars/findcars.component';
 import { ImageuploadComponent } from './_process/imageupload/imageupload.component';
 import { AddnewcarComponent } from './_process/addnewcar/addnewcar.component';
+import { CustomerRegisterComponent } from './customer-register/customer-register.component';
 
 
 const routes: Routes = [
@@ -35,9 +36,13 @@ const routes: Routes = [
                 path: "imageupload",
                 component: ImageuploadComponent
             },
-             {
+            {
                 path: "addnewcar",
                 component: AddnewcarComponent
+            },
+            {
+                path: "register",
+                component: CustomerRegisterComponent
             },
         ]
     },
@@ -118,7 +123,7 @@ const routes: Routes = [
         FormsModule,
         NgSelectModule,
         CommonModule
-    
+
     ],
     exports: [
         RouterModule,

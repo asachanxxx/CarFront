@@ -6,13 +6,7 @@
 
         <div class="car-item gray-bg text-center">
           <div class="car-image">
-            <img class="img-fluid" src='../../../../assets/img/cars/'+ {{1}}+ '.jpg' alt="">
-            <!-- <div class="car-overlay-banner">
-              <ul>
-                <li><a href="#"><i class="fa fa-link"></i></a></li>
-                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-              </ul>
-            </div> -->
+            <img class="img-fluid" src="../../../../assets/img/cars/0{{item.Id}}.jpg" alt="">
           </div>
         </div>
 
@@ -25,8 +19,8 @@
               voluptate. Harum blanditiis ullam deleniti.</p>
           </div>
           <div class="price">
-            <span class="old-price"> {{(item.SellingPrice*105)/100}} | DecimalPipeMy </span>
-            <span class="new-price">{{item.SellingPrice}} LKR </span>
+            <span class="old-price"> {{(item.SellingPrice*105)/100 | thousondseparator}}  </span>
+            <span class="new-price">{{item.SellingPrice| thousondseparator }} LKR </span>
             <a class="button red float-right" href="#">Details</a>
           </div>
           <div class="car-list">
@@ -43,4 +37,6 @@
 
 </ng-container>
 
-
+<div class="pagination-nav d-flex justify-content-center">
+  <ngb-pagination [collectionSize]="70" [(page)]="page" [boundaryLinks]="true" (pageChange) = "pageChange()"></ngb-pagination>
+</div>

@@ -9,7 +9,7 @@ import { ItemListingVM } from '../../../_models/_process/ItemListingVM.model';
 export class CentrallistComponent implements OnInit {
 
   @Input() ItemsList:Array<ItemListingVM>
-
+  page: number =2;
   
   constructor() { 
 
@@ -19,4 +19,7 @@ export class CentrallistComponent implements OnInit {
   ngOnInit() {
   }
 
+  pageChange(){
+    console.log("this.page", this.page)
+  }
 }

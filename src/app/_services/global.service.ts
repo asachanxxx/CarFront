@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class GlobalService {
 
-    private _primaryAPI: string = "http://localhost:1245/";
+    private _primaryAPI: string = "http://localhost:9500/";
     public get PrimaryAPI() {
         return this._primaryAPI;
     }
@@ -11,9 +11,15 @@ export class GlobalService {
         this._primaryAPI = PrimaryApiret
     }
 
-    
+    private _MessageCaption : string ="Sell Yout Car";
+    public get MessageCaption() : string {
+        return this._MessageCaption;
+    }
+    public set MessageCaption(v : string) {
+        this._MessageCaption = v;
+    }
 
-    private _primaryTocken: string = "Bearer ansKFMPonKyab-TBmgQAThXNKoSAt8ZHej31-Is1a0X0wo5iSIjiaXvRdHscyr9J3v3iG3PTg8_BnoZaiMRCEY03zAONYrKppp1ZdSAgGenMcqeW-UYyKKkOEk7UhXO3l1_-9kXc9rBnekuOIqCrH8TfbcF_G_hgUVFS2N8omQYetJ-VobtaW8n-8AZL72wigGeckLtjZhm12aEEwxsDxnrrY4WA0kB3T9eNURvSO_9lwjJ2_oBRwOPojcAh-dfrlOln0DkSpYL8F2Si2Od63pesFnMZ9uhBkYjZvWCfeN0k8-V7jvBLae_Pz_ljoYM1rVRF-CXwQgBOKiKmSi9h65DUAsqaQY8gLXb69xqPmomscXLn4yVwsdkNyZlayuVlL3EhQgjslgss6xqiUw36SPSsfTN9rMmRQr3dpiJogn61U7kF5FqCRAhmjj_JPOo8aXoh1EGkov0ArerB6lgMDvt3UM_f8-Dzi0i8vtZrstg" ;
+    private _primaryTocken: string = "Bearer uTOCV8g9CRFk01n0Yn2anEr6BVIEVuZGKaDn7w_0sM5AnvOOk2D3KgTY67W7Wc-ZwF3jjb4LgkRkNTfns-Ctvs_IIgMNKXZLPNuRDjnGn2pqcvOmmauWGQUNFkDJOFfrvDYlROItReXB48KWbXygOQXX1jjeGZYArnT40Hnh6gL6LCe69sl40u1S4nIC6m3wTuwiODwWAWxhOueGv_bRalyji3f-S44ETS4yOncfzx5oPxh5DH3I3oyHIS7eduLZYrrXkFowTff604ynnrsn3cbDOP-PT1u8saOhXzQXQ9BKU6Hp2E_FBG1oKs4HO5otOA1r21NGKE7oxE7PIWYb1m68puAj9lhX7wffj4UdXr4p6rf44gCtFUlhui1L_drnWXPlW-jVlkdEG6Y6G6WO3804pk2HBnXaD8cKZ--8Y2Wdnrc6DfU4QH4v_SRcQHs3FlRkIZfbtdv4SpB7rEKwvb_yZvctdPdmrFTWStD_T1o" ;
     public get PrimaryTocken() {
         return this._primaryTocken;
     }
